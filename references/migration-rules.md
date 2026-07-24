@@ -1,6 +1,6 @@
 # Migration Rules
 
-Detailed rules for migrating existing entries. The main CLAUDE.md covers the base migration workflow (rules 1-7b); this file provides extended rules (5b, 8-13), transformation migrations, and emergency recovery.
+Detailed rules for migrating existing entries. The main AGENTS.md covers the base migration workflow (rules 1-7b); this file provides extended rules (5b, 8-13), transformation migrations, and emergency recovery.
 
 ---
 

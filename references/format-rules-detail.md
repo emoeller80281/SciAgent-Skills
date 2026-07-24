@@ -1,6 +1,6 @@
 # Format Rules — Detailed Sub-type Rules
 
-Extended rules for each SKILL.md sub-type format. The main CLAUDE.md covers required sections and code block minimums; this file provides detailed guidance on bundled resources, reference triage, dual interfaces, related skills, ecosystem tools, and guide-specific rules.
+Extended rules for each SKILL.md sub-type format. The main AGENTS.md covers required sections and code block minimums; this file provides detailed guidance on bundled resources, reference triage, dual interfaces, related skills, ecosystem tools, and guide-specific rules.
 
 ---
 

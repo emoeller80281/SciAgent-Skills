@@ -12,15 +12,15 @@ Open Claude Code in the SciCraft repo and type:
 Add a skill for <tool name>
 ```
 
-Claude Code reads `CLAUDE.md`, follows the 6-step workflow, and produces a validated `SKILL.md`. Review the output, then open a PR.
+Claude Code reads the repository's `CLAUDE.md` compatibility shim, which imports the canonical `AGENTS.md`, follows the 6-step workflow, and produces a validated `SKILL.md`. Review the output, then open a PR.
 
 ### Option B: Write it yourself
 
-1. Read `CLAUDE.md` — the full authoring workflow is in Steps 1–6
+1. Read `AGENTS.md` — the full authoring workflow is in Steps 1–6
 2. Classify your topic: pipeline / toolkit / database / guide
 3. Choose a category directory under `skills/`
 4. Copy the right template from `templates/`
-5. Fill in the template following the format rules in `CLAUDE.md`
+5. Fill in the template following the format rules in `AGENTS.md`
 6. Add an entry to `registry.yaml`
 7. Run `pixi run test` — all checks must pass before opening a PR
 

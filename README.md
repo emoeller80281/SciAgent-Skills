@@ -108,19 +108,25 @@ Or just describe your task — the agent finds the relevant skill automatically:
 
 #### Method B: Project-Level Integration (Claude Code)
 
-Clone into your project directory so Claude Code picks up skills via `CLAUDE.md`:
+Clone into your project directory:
 
 ```bash
 cd your-project
 git clone https://github.com/jaechang-hits/SciAgent-Skills.git .sciagent-skills
 ```
 
-Add to your project's `CLAUDE.md`:
+Add the canonical guidance to your project's `AGENTS.md`:
 
 ```markdown
 ## Scientific Skills
 Reference skills in `.sciagent-skills/skills/` for domain-specific analysis.
 Registry: `.sciagent-skills/registry.yaml`
+```
+
+If the project does not already have a `CLAUDE.md`, add this compatibility shim so Claude Code imports the same guidance:
+
+```markdown
+@AGENTS.md
 ```
 
 #### Using with Other Agents
@@ -219,7 +225,7 @@ SciAgent-Skills/
 │   └── molecular-biology/
 ├── templates/              # Skill authoring templates
 ├── registry.yaml           # Index of all skills
-├── CLAUDE.md               # Skill authoring guide
+├── AGENTS.md               # Skill authoring guide
 └── scripts/
     └── validate_registry.py
 ```
@@ -260,7 +266,7 @@ Uses: `lamindb-data-management` → `reactome-pathway-analysis` → `string-prot
 
 ### Adding a New Skill
 
-1. Read `CLAUDE.md` for the full authoring workflow
+1. Read `AGENTS.md` for the full authoring workflow
 2. Classify your topic (pipeline / toolkit / database / guide)
 3. Pick a category from the table above
 4. Use the appropriate template from `templates/`
@@ -303,4 +309,3 @@ This project builds on 50+ open-source scientific Python packages. If you find a
 ---
 
 <sub>**Related searches:** bioinformatics AI agent, Claude Code scientific skills, RNA-seq analysis tool, single-cell RNA-seq AI, drug discovery AI pipeline, protein structure prediction, computational biology automation, life science AI tools, 바이오인포매틱스 AI, 오믹스 호라이즌, 생명과학 AI 에이전트, BixBench benchmark</sub>
-
