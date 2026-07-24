@@ -9,7 +9,7 @@ Brief description of the skill(s) added or change made.
 - [ ] Skill type is correctly set: pipeline / toolkit / database / guide
 - [ ] `description` field is ≤ 1024 characters
 - [ ] Frontmatter has `name`, `description`, `license`
-- [ ] Required sections present in correct order (see `CLAUDE.md`)
+- [ ] Required sections present in correct order (see `AGENTS.md`)
 - [ ] Code blocks are runnable with sample data or clear placeholders
 - [ ] Troubleshooting table has 5+ rows
 - [ ] Key Parameters table has 5+ rows

@@ -1,15 +1,15 @@
 <!-- Template: Toolkit Sub-type — for tools that are collections of independent functional modules.
      For pipeline-style tools (linear input→processing→output), use SKILL_TEMPLATE.md instead.
-     For database/API wrapper tools, use this template with adaptations noted in CLAUDE.md.
+     For database/API wrapper tools, use this template with adaptations noted in AGENTS.md.
 
      Scaffolding shortcut: `.claude/skills/sciagent-skill-creator/` can drop this template
      into the correct category, fill the frontmatter, and append the registry entry for you.
 
      Note: the optional `tags: [...]` field lives in registry.yaml (entry-level), NOT in the
-     SKILL.md frontmatter below. See CLAUDE.md Step 5 "tags field" for when to use it. -->
+     SKILL.md frontmatter below. See AGENTS.md Step 5 "tags field" for when to use it. -->
 ---
 name: "Toolkit Name Here"
-# Description rules (CLAUDE.md Step 5):
+# Description rules (AGENTS.md Step 5):
 #   - Length ≤ 1024 chars; first 120 chars carry discovery weight
 #   - Lead with tool name or domain keyword — NOT stop verbs (Use/A/An/The/Query/Fetch/Run)
 #   - Cross-references ("For X use Y") go at the END
@@ -278,7 +278,7 @@ print("Converted format_a → format_b")
 ## Bundled Resources
 
 <!-- Optional. Only include if this skill ships sibling directories next to SKILL.md.
-     See CLAUDE.md Step 4 "Bundled resources" for the references/ vs assets/ vs scripts/ rule.
+     See AGENTS.md Step 4 "Bundled resources" for the references/ vs assets/ vs scripts/ rule.
      Extract code into scripts/ when a block exceeds ~80 lines, the same helper repeats
      across recipes, or the entry effectively ships a CLI utility. -->
 

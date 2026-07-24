@@ -1,6 +1,6 @@
 # Skills Registry
 # Each entry is added here when a new SKILL.md is created.
-# This file is maintained by following the workflow in CLAUDE.md (Step 5).
+# This file is maintained by following the workflow in AGENTS.md (Step 5).
 #
 # Entry schema:
 #   name         (required) — kebab-case unique slug; must match frontmatter `name`

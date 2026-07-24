@@ -1,6 +1,6 @@
 # Quality Checklist — Type-Specific Sections
 
-Additional quality checks by skill sub-type. The main CLAUDE.md contains universal checklist items (Frontmatter, Structure, Pipeline code depth, Toolkit code depth, Toolkit content quality, Guide content depth, Content quality). This file covers type-specific additional checks.
+Additional quality checks by skill sub-type. The main AGENTS.md contains universal checklist items (Frontmatter, Structure, Pipeline code depth, Toolkit code depth, Toolkit content quality, Guide content depth, Content quality). This file covers type-specific additional checks.
 
 ---
 

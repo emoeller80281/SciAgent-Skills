@@ -1,6 +1,6 @@
 # Tool-Type-Specific Adaptations
 
-Detailed sub-type adaptation rules for Step 1b classification. The main CLAUDE.md covers the base Pipeline/Toolkit/Database/Guide classification; this file provides type-specific extensions.
+Detailed sub-type adaptation rules for Step 1b classification. The main AGENTS.md covers the base Pipeline/Toolkit/Database/Guide classification; this file provides type-specific extensions.
 
 ---
 

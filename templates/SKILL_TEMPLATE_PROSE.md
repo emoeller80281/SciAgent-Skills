@@ -6,10 +6,10 @@
      into the correct category, fill the frontmatter, and append the registry entry for you.
 
      Note: the optional `tags: [...]` field lives in registry.yaml (entry-level), NOT in the
-     SKILL.md frontmatter below. See CLAUDE.md Step 5 "tags field" for when to use it. -->
+     SKILL.md frontmatter below. See AGENTS.md Step 5 "tags field" for when to use it. -->
 ---
 name: "Skill Name Here"
-# Description rules (CLAUDE.md Step 5):
+# Description rules (AGENTS.md Step 5):
 #   - Length ≤ 1024 chars; first 120 chars carry discovery weight
 #   - Lead with the domain or decision-space keyword — NOT stop verbs (Use/A/An/The/...)
 #   - Cross-references ("For X use Y") go at the END
