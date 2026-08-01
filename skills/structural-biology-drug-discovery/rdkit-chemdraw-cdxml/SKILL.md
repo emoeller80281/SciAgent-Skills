@@ -121,7 +121,7 @@ if not Chem.HasChemDrawCDXSupport():
     raise RuntimeError("This RDKit build lacks ChemDraw write support")
 ```
 
-### Module 4: Good molecular depiction (분자를 잘 그리기)
+### Module 4: Good molecular depiction
 
 Layout quality is set *before* you write. CoordGen gives more natural, less-overlapping 2D coordinates than the default algorithm; template alignment keeps a common scaffold oriented consistently across a series.
 
@@ -153,7 +153,7 @@ for m in series:
     print(Chem.MolToSmiles(m), "aligned to template")
 ```
 
-### Module 5: Drawing arrows (화살표를 잘 그리기)
+### Module 5: Drawing arrows
 
 RDKit cannot write arrows, so build them in CDXML. A reaction arrow is an `<arrow>` object with `Head3D`/`Tail3D` positions (`"x y z"`, y increases downward). The `ArrowheadHead`/`ArrowheadType` attributes control the head; `HeadSize` is in CDXML units (~1000/unit typical).
 
@@ -210,7 +210,7 @@ scheme.append(step)
 print(ET.tostring(scheme, encoding="unicode"))
 ```
 
-### Module 7: Adding text and labels (텍스트를 잘 넣기)
+### Module 7: Adding text and labels
 
 Free text is a `<t>` object positioned by `p="x y"`, containing one or more `<s>` styled-string children. Each `<s>` references a `font` id (from `<fonttable>`) and a `color` index (from `<colortable>`); `size` is in points and `face` is a style bitmask (1=bold, 2=italic, 4=underline; e.g. `96` = subscript/superscript flags used by ChemDraw).
 
@@ -262,7 +262,7 @@ print(ET.tostring(make_formula(81, 690, 730,
       [("-CO", 0), ("2", 32), ("H", 0)]), encoding="unicode"))
 ```
 
-### Module 8: Editing an existing CDXML file (수정)
+### Module 8: Editing an existing CDXML file
 
 Because CDXML is generic XML, `ElementTree` round-trips arrows, text, and graphics it does not "understand" — so you can load a real ChemDraw file, tweak it, and save without losing objects. (RDKit's Mol round-trip would drop them.)
 
