@@ -62,6 +62,13 @@ entries:
     path: "skills/structural-biology-drug-discovery/rdkit-cheminformatics/SKILL.md"
     description: "Cheminformatics toolkit for molecular analysis: SMILES/SDF parsing, descriptors, fingerprints, similarity search, substructure filtering, drug-likeness, 3D conformers"
     date_added: "2026-02-16"
+  - name: "rdkit-chemdraw-cdxml"
+    type: skill
+    sub_type: toolkit
+    category: "structural-biology-drug-discovery"
+    path: "skills/structural-biology-drug-discovery/rdkit-chemdraw-cdxml/SKILL.md"
+    description: "Read, write, and edit ChemDraw CDX/CDXML files with rdkit.Chem.rdChemDraw plus direct XML editing. Parse molecules and reactions, write structures with good 2D depiction, and hand-build arrows, plus signs, reaction schemes, and text/labels that RDKit cannot write. Cross-domain (figure generation)."
+    date_added: "2026-08-01"
   - name: "gget-genomic-databases"
     type: skill
     sub_type: database
