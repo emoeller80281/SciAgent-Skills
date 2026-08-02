@@ -288,11 +288,14 @@ tree.write("reaction_edited.cdxml", encoding="unicode", xml_declaration=True)
 print("Saved reaction_edited.cdxml")
 ```
 
-### Module 9: Rendering CDXML to PNG (visual QA)
+### Module 9: Rendering CDXML to PNG (paired deliverable + visual QA)
 
-CDXML is not human-viewable on its own. **Always render what you generate and look
-at it** — rendering is the fastest way to catch overlapping structures, stray
-arrows (from duplicate/degenerate arrow ids), and text colliding with atoms.
+CDXML is not human-viewable on its own, so **a `.cdxml` should never be handed
+over alone — always deliver it together with a rendered `.png` (or `.svg`) of the
+same drawing.** The image serves two purposes: it is what the user actually looks
+at, and it is your own fastest check for overlapping structures, stray arrows
+(from duplicate/degenerate arrow ids), and text colliding with atoms. Render the
+PNG next to the CDXML (same basename), verify it visually, then provide both files.
 [Indigo](https://lifescience.opensource.epam.com/indigo/) (`epam.indigo`, renderer
 bundled) loads a CDXML — a scheme with arrows as a *reaction*, a lone structure as
 a *molecule* — and rasterizes arrows, text, and layout faithfully.
@@ -315,7 +318,12 @@ def render_cdxml(cdxml_path, png_path, width=1600):
     rnd.renderToFile(obj, png_path)
     return png_path
 
-print("Wrote", render_cdxml("scheme.cdxml", "scheme.png"))
+# Render the PNG as a sibling of the CDXML, then deliver BOTH files together
+from pathlib import Path
+src = "scheme.cdxml"
+png = str(Path(src).with_suffix(".png"))
+render_cdxml(src, png)
+print(f"Deliverables: {src} + {png}")
 ```
 
 RDKit can also draw a *parsed* reaction (`Draw.ReactionToImage(rxn)`), but it
@@ -411,7 +419,7 @@ arrow = ET.SubElement(page, "arrow", {"id": "40", "FillType": "None",
         "BoundingBox": "260 0 320 7", "Head3D": "320 3 0", "Tail3D": "260 3 0"})
 cond = ET.SubElement(page, "t", {"id": "70", "p": "270 -12"})
 ET.SubElement(cond, "s", {"font": "21", "size": "9", "color": "0"}).text = "H+, reflux"
-prod = _fragment_of("CCOC(C)=O", 300, 360); page.append(prod)  # product
+prod = _fragment_of("CCOC(C)=O", 300, 420); page.append(prod)  # product (clear of arrow)
 
 scheme = ET.SubElement(page, "scheme", {"id": "60"})
 ET.SubElement(scheme, "step", {"id": "61", "ReactionStepReactants": "100 200",
@@ -426,6 +434,14 @@ open("esterification.cdxml", "w", encoding="utf-8").write(cdxml)
 # Verify: RDKit should re-parse it as a reaction
 rxns = rdChemReactions.ReactionsFromCDXMLBlock(cdxml, sanitize=True)
 print("Re-parsed reactions:", len(rxns))
+
+# Deliverable pair: render a PNG next to the CDXML (see Module 9) and hand over both
+from indigo import Indigo
+from indigo.renderer import IndigoRenderer
+ind = Indigo(); rnd = IndigoRenderer(ind)
+ind.setOption("render-output-format", "png"); ind.setOption("render-image-width", 1600)
+rnd.renderToFile(ind.loadReaction(cdxml), "esterification.png")
+print("Deliverables: esterification.cdxml + esterification.png")
 ```
 
 ### Workflow 3: Modify an existing ChemDraw file, preserving arrows and text
@@ -491,7 +507,7 @@ print("Edited file saved; arrows and existing text preserved")
 
 11. **XML-escape special characters in text.** `<`, `>`, and `&` inside a `<s>` run must be written as `&lt;`, `&gt;`, `&amp;` (e.g. a retrosynthesis note "3 -> 4" becomes "3 -&gt; 4"). `ElementTree` escapes automatically when you set `.text`; only hand-written strings need manual escaping.
 
-12. **Render and look at every file you generate** (Module 9). CDXML is not viewable by eye; the only reliable check is to rasterize it. Rendering immediately exposes stray lines from a duplicate/degenerate arrow id, structures overlapping an arrow, condition text sitting on top of atoms, and a compressed scheme that dropped intermediates. Pair it with the validation recipe below (duplicate ids, repeated adjacent fragments, bond-length spread) so both the XML and the picture are checked before you hand the file over.
+12. **Deliver the `.cdxml` and a rendered `.png` together, never the CDXML alone** (Module 9). CDXML is not viewable by eye, so the image is both the user's actual view and your own reliable check — rendering immediately exposes stray lines from a duplicate/degenerate arrow id, structures overlapping an arrow, condition text sitting on top of atoms, and a compressed scheme that dropped intermediates. Render the PNG next to the CDXML, run the lint recipe below (duplicate ids, repeated adjacent fragments, bond-length spread), fix what either surfaces, then hand over both files.
 
 ## Common Recipes
 
