@@ -194,20 +194,29 @@ def build_scheme(steps, out_cdxml, out_png=None, title=None, cols=4):
         ET.SubElement(t, "s", {"font": "21", "size": "16", "color": "0", "face": "1"}).text = title
 
     cdxml = ET.tostring(root, encoding="unicode")
+    # Fail loudly on malformed XML instead of writing a file ChemDraw would reject.
+    ET.fromstring(cdxml)
     Path(out_cdxml).write_text('<?xml version="1.0" encoding="UTF-8"?>\n' + cdxml, encoding="utf-8")
 
-    png_path = None
-    if out_png:
+    # The PNG is not optional: a .cdxml is not viewable without ChemDraw, so the
+    # preview is the only evidence the file is correct. Render it or raise.
+    if out_png is None:
+        out_png = str(Path(out_cdxml).with_suffix(".png"))
+    try:
         from indigo import Indigo
         from indigo.renderer import IndigoRenderer
-        ind = Indigo()
-        rnd = IndigoRenderer(ind)
-        ind.setOption("render-output-format", "png")
-        ind.setOption("render-background-color", "1,1,1")
-        ind.setOption("render-image-width", 1800)
-        rnd.renderToFile(ind.loadReaction(cdxml), out_png)
-        png_path = out_png
-    return out_cdxml, png_path
+    except ImportError as exc:  # pragma: no cover - environment-dependent
+        raise RuntimeError(
+            "PNG rendering needs the 'epam.indigo' package (pip install epam.indigo). "
+            "Never deliver a .cdxml without its PNG preview."
+        ) from exc
+    ind = Indigo()
+    rnd = IndigoRenderer(ind)
+    ind.setOption("render-output-format", "png")
+    ind.setOption("render-background-color", "1,1,1")
+    ind.setOption("render-image-width", 1800)
+    rnd.renderToFile(ind.loadReaction(cdxml), out_png)
+    return out_cdxml, out_png
 
 
 if __name__ == "__main__":
