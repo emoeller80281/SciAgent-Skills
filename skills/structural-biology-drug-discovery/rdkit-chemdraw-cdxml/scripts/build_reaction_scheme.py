@@ -86,12 +86,12 @@ def _place(frag, cx: float, cy: float):
         n.set("p", f"{x + cx} {y + cy}")
 
 
-def _cell_center(i: int, cols: int):
+def _cell_center(i: int, cols: int, cell_w: float, cell_h: float):
     """Boustrophedon (snake) grid: row 0 left->right, row 1 right->left, ..."""
     row, col = divmod(i, cols)
     vis_col = col if row % 2 == 0 else (cols - 1 - col)
-    cx = MARGIN + vis_col * CELL_W + CELL_W / 2
-    cy = MARGIN + row * CELL_H + CELL_H / 2
+    cx = MARGIN + vis_col * cell_w + cell_w / 2
+    cy = MARGIN + row * cell_h + cell_h / 2
     return cx, cy, row, vis_col
 
 
@@ -117,17 +117,28 @@ def build_scheme(steps, out_cdxml, out_png=None, title=None, cols=4):
         obj_id += 1
         return obj_id
 
-    frag_ids, centers, bboxes = [], [], []
-    for i, step in enumerate(steps):
-        cx, cy, _, _ = _cell_center(i, cols)
+    # Pass 1: build every fragment centered on the origin and measure it, so the
+    # cell size can be derived from the LARGEST structure. Fixed cells overlap once
+    # a structure is wider than the cell; sizing to the biggest bbox prevents that.
+    built = []
+    for step in steps:
         fid = new_obj()
         frag, next_id, bbox = _fragment_for(step["smiles"], fid, next_id)
+        built.append((fid, frag, bbox, step))
+    max_w = max(2 * b[0] for _, _, b, _ in built)
+    max_h = max(2 * b[1] for _, _, b, _ in built)
+    cell_w = max(CELL_W, max_w + 150)   # + room for the arrow and conditions text
+    cell_h = max(CELL_H, max_h + 130)   # + room for the name label and conditions
+
+    # Pass 2: place each fragment at its cell center; add the name label.
+    frag_ids, centers, bboxes = [], [], []
+    for i, (fid, frag, bbox, step) in enumerate(built):
+        cx, cy, _, _ = _cell_center(i, cols, cell_w, cell_h)
         _place(frag, cx, cy)
         page.append(frag)
         frag_ids.append(fid)
         centers.append((cx, cy))
         bboxes.append(bbox)
-        # Name label centered under the structure.
         if step.get("name"):
             t = ET.SubElement(page, "t", {"id": str(new_obj()),
                                           "p": f"{cx} {cy + bbox[1] + 34}",
