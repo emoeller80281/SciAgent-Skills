@@ -503,6 +503,20 @@ The helper renders as it builds, so **you can open the PNG, confirm the layout, 
 only then deliver both files** — the render step cannot be forgotten because it is
 part of the same call.
 
+Two things to know:
+
+- **Cells auto-size to the largest structure**, so big molecules (fused rings,
+  sulfonyl groups) never overlap their neighbours. This is the failure mode of
+  hand-placed coordinates — large structures collide because the spacing was
+  guessed. Let the helper compute spacing instead of hardcoding positions.
+- **Model convergent / multi-component steps by folding co-reactants into the
+  `conditions` text** (e.g. `conditions=["+ (MeO2C)2C=CHOMe", "Base, MeCN"]`),
+  keeping one main-chain structure per cell. The helper lays out a linear main
+  chain; drawing every co-reactant as a separate `+` structure is what pushes
+  people back to hand-building overlapping layouts. If a co-reactant must be
+  drawn, add it as its own step with an empty arrow, or place it with the raw
+  XML from Modules 5-7 after the main chain is built.
+
 ## Key Parameters
 
 | Parameter | Module / Function | Default | Range / Options | Effect |
