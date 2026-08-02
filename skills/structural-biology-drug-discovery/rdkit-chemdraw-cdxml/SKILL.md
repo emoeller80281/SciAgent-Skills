@@ -332,10 +332,15 @@ tree.write("output_reaction.cdxml", encoding="unicode", xml_declaration=True)
 
 `scripts/build_reaction_scheme.py` turns `(smiles, name, conditions)` steps into a laid-out scheme **and its PNG in one call**, handling grid layout, globally unique ids, single arrows, and conditions text placed clear of structures — the defects that recur when schemes are hand-built. Cells auto-size to the largest structure, so big molecules never overlap. Model convergent/multi-component steps by folding co-reactants into `conditions` (e.g. `["+ (MeO2C)2C=CHOMe", "Base, MeCN"]`), keeping one main-chain structure per cell.
 
-The `scripts/` files are **not on the execution environment's import path** — copy the two you need into your working directory first (read each with `read_file` from the skill's `scripts/` dir and write it beside your code), then import:
+The `scripts/` files can be **read** from the skill path but **not imported** from there — they are not on the execution sandbox's import path. Copy the two you need into your working directory first, then import. Each script depends only on rdkit (+ epam.indigo), never on the other, so copy them independently:
 
 ```python
-# after copying build_reaction_scheme.py and check_scheme.py into the workdir:
+# 1) Copy the helpers into the workdir (read_file is routed to the skill backend):
+_SKILL = "SciAgent-Skills/skills/structural-biology-drug-discovery/rdkit-chemdraw-cdxml/scripts"
+for name in ("build_reaction_scheme.py", "check_scheme.py"):
+    open(name, "w").write(read_file(f"{_SKILL}/{name}"))   # read_file = your file tool
+
+# 2) Now they import normally from the workdir:
 from build_reaction_scheme import build_scheme
 from check_scheme import check_all
 
@@ -416,7 +421,7 @@ print(minidom.parseString(open("esterification.cdxml", encoding="utf-8").read())
 
 ## Bundled Resources
 
-The `scripts/` files are read-only in the skill directory and are **not importable from there** — copy the ones you need into your working directory (read with `read_file`, write locally), then `import` or run them.
+The `scripts/` files can be read from the skill path but **not imported from there** — copy the one you need into your working directory (`read_file` it, write locally), then `import` or run it (see Workflow 4 for the exact copy snippet). Each is self-contained and depends only on rdkit (+ epam.indigo).
 
 - `references/cdxml-schema-reference.md` — element/attribute cheat-sheet (`n`, `b`, `arrow`, `graphic`, `step`/`scheme`, `t`/`s`, `fonttable`, `colortable`), coordinate conventions, enum tables, and a copy-paste document header.
 - `scripts/build_reaction_scheme.py` — assemble a multi-step scheme from `(smiles, name, conditions)` steps and render the PNG in one call; auto-sizes cells so structures never overlap. Library (`build_scheme(...)`) or CLI (`python build_reaction_scheme.py steps.json out.cdxml out.png "Title"`).
