@@ -467,6 +467,42 @@ tree.write("output_reaction.cdxml", encoding="unicode", xml_declaration=True)
 print("Edited file saved; arrows and existing text preserved")
 ```
 
+### Workflow 4: Build a multi-step scheme with the bundled helper (recommended)
+
+**Goal**: Turn a list of `(SMILES, name, conditions)` steps into a laid-out scheme
+**and its PNG in one call** — without hand-managing coordinates, object ids, or arrow
+placement. This is the reliable path for anything beyond a single reaction: doing it
+by hand repeatedly produces duplicate ids, arrows emitted twice, and conditions text
+landing on a structure. `scripts/build_reaction_scheme.py` (bundled) does the layout
+mechanically — snake grid, unique ids, conditions centered in the clear gap over each
+arrow — and always writes the `.cdxml` and `.png` together.
+
+```python
+from scripts.build_reaction_scheme import build_scheme  # adjust import path to the skill dir
+
+steps = [
+    {"smiles": "O=C1CCCC1", "name": "cyclopentanone"},
+    # `conditions` = reagents for the arrow LEADING INTO this step (list = stacked lines)
+    {"smiles": "O=C1C(Br)C(Br)C(Br)C1Br", "name": "tetrabromoketone",
+     "conditions": ["Br2 (excess)", "AcOH, 25 C"]},
+    {"smiles": "O=C1C=CC=C1Br", "name": "2-bromocyclopentadienone",
+     "conditions": ["Et2NH", "cold Et2O, -2 HBr"]},
+    {"smiles": "O=C1C2C=CC1(Br)C1(Br)C(=O)C=CC21", "name": "endo dimer",
+     "conditions": ["spontaneous", "Diels-Alder"]},
+    {"smiles": "C12C3C4C1C1C2C3C41", "name": "cubane",
+     "conditions": ["(remaining steps...)"]},
+]
+
+cdxml_path, png_path = build_scheme(
+    steps, "cubane.cdxml", "cubane.png",
+    title="Eaton's Total Synthesis of Cubane (1964)", cols=4)
+print(f"Deliverables: {cdxml_path} + {png_path}")   # hand over BOTH
+```
+
+The helper renders as it builds, so **you can open the PNG, confirm the layout, and
+only then deliver both files** — the render step cannot be forgotten because it is
+part of the same call.
+
 ## Key Parameters
 
 | Parameter | Module / Function | Default | Range / Options | Effect |
@@ -621,6 +657,7 @@ print("CLEAN" if not issues else "ISSUES:\n  " + "\n  ".join(issues))
 ## Bundled Resources
 
 - `references/cdxml-schema-reference.md` — element/attribute cheat-sheet for `n`, `b`, `arrow`, `graphic`, `step`/`scheme`, `t`/`s`, `fonttable`, `colortable`; coordinate conventions; and the `ArrowType`/`GraphicType`/`SymbolType`/font-face enumerations, distilled from the CambridgeSoft CDX/CDXML specification.
+- `scripts/build_reaction_scheme.py` — assemble a multi-step scheme from `(smiles, name, conditions)` steps and render the PNG in one call (Workflow 4). Handles grid layout, globally unique object ids, single arrows, and conditions text placed clear of structures — the defects that recur when schemes are hand-built. Runnable as a library (`build_scheme(...)`) or CLI (`python build_reaction_scheme.py steps.json out.cdxml out.png "Title"`).
 
 ## Related Skills
 
