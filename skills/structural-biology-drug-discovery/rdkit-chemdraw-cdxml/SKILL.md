@@ -18,13 +18,14 @@ ChemDraw's native formats are CDX (binary) and CDXML (an XML serialization of th
 - Add captions, atom labels, or annotations to a chemical drawing at specific canvas positions
 - Modify an existing ChemDraw file (relabel a group, add a note, reposition an arrow) without losing its arrows/text
 - Improve the 2D layout of a structure before export (CoordGen, template alignment, straightening)
+- Render a `.cdxml`/`.cdx` to PNG or SVG for a visual quality check of the drawing you generated
 - Batch-generate ChemDraw figures for a reaction dataset or SAR table
 - Use `rdkit-cheminformatics` instead when you only need descriptors, fingerprints, similarity, or SMARTS — no ChemDraw I/O
 - For multi-format 3D structure conversion (MOL2, XYZ, PDB), use `openbabel` instead; this toolkit is 2D ChemDraw-specific
 
 ## Prerequisites
 
-- **Python packages**: `rdkit` (2023.03+ recommended; must be built with ChemDraw support), `lxml` (optional, for pretty-printing/XPath); `xml.etree.ElementTree` from the stdlib is sufficient for editing
+- **Python packages**: `rdkit` (2023.03+ recommended; must be built with ChemDraw support), `lxml` (optional, for pretty-printing/XPath); `xml.etree.ElementTree` from the stdlib is sufficient for editing. Optional: `epam.indigo` for rendering CDXML to PNG/SVG (Module 9)
 - **Data requirements**: SMILES/Mol objects for writing; `.cdxml` (UTF-8 text) or `.cdx` (binary) files for reading
 - **Environment**: Python 3.9+; verify ChemDraw write support at runtime (see below) — some conda builds omit it
 
@@ -287,6 +288,40 @@ tree.write("reaction_edited.cdxml", encoding="unicode", xml_declaration=True)
 print("Saved reaction_edited.cdxml")
 ```
 
+### Module 9: Rendering CDXML to PNG (visual QA)
+
+CDXML is not human-viewable on its own. **Always render what you generate and look
+at it** — rendering is the fastest way to catch overlapping structures, stray
+arrows (from duplicate/degenerate arrow ids), and text colliding with atoms.
+[Indigo](https://lifescience.opensource.epam.com/indigo/) (`epam.indigo`, renderer
+bundled) loads a CDXML — a scheme with arrows as a *reaction*, a lone structure as
+a *molecule* — and rasterizes arrows, text, and layout faithfully.
+
+```python
+from indigo import Indigo
+from indigo.renderer import IndigoRenderer
+
+def render_cdxml(cdxml_path, png_path, width=1600):
+    ind = Indigo()
+    rnd = IndigoRenderer(ind)
+    ind.setOption("render-output-format", "png")   # or "svg"
+    ind.setOption("render-background-color", "1,1,1")
+    ind.setOption("render-image-width", width)
+    cdxml = open(cdxml_path, encoding="utf-8").read()
+    try:
+        obj = ind.loadReaction(cdxml)   # scheme with arrows
+    except Exception:
+        obj = ind.loadMolecule(cdxml)   # single structure
+    rnd.renderToFile(obj, png_path)
+    return png_path
+
+print("Wrote", render_cdxml("scheme.cdxml", "scheme.png"))
+```
+
+RDKit can also draw a *parsed* reaction (`Draw.ReactionToImage(rxn)`), but it
+re-lays-out the molecules and drops the original ChemDraw arrows/text/positions —
+use Indigo when you want the file rendered as authored.
+
 ## Key Concepts
 
 ### CDXML coordinate system
@@ -456,6 +491,8 @@ print("Edited file saved; arrows and existing text preserved")
 
 11. **XML-escape special characters in text.** `<`, `>`, and `&` inside a `<s>` run must be written as `&lt;`, `&gt;`, `&amp;` (e.g. a retrosynthesis note "3 -> 4" becomes "3 -&gt; 4"). `ElementTree` escapes automatically when you set `.text`; only hand-written strings need manual escaping.
 
+12. **Render and look at every file you generate** (Module 9). CDXML is not viewable by eye; the only reliable check is to rasterize it. Rendering immediately exposes stray lines from a duplicate/degenerate arrow id, structures overlapping an arrow, condition text sitting on top of atoms, and a compressed scheme that dropped intermediates. Pair it with the validation recipe below (duplicate ids, repeated adjacent fragments, bond-length spread) so both the XML and the picture are checked before you hand the file over.
+
 ## Common Recipes
 
 ### Recipe: Validate a hand-built CDXML by re-reading it
@@ -499,6 +536,51 @@ pretty = minidom.parseString(open("esterification.cdxml", encoding="utf-8").read
 print(pretty.toprettyxml(indent="  ")[:1500])
 ```
 
+### Recipe: Lint a generated scheme before rendering
+
+When to use: catch the common auto-generation defects (duplicate ids, an
+accidentally repeated structure, uneven scale) that render as stray lines,
+floating duplicates, or mismatched sizes.
+
+```python
+import xml.etree.ElementTree as ET
+from collections import Counter
+import statistics
+
+def lint_cdxml(path):
+    root = ET.fromstring(open(path, encoding="utf-8").read())
+    problems = []
+    # 1) duplicate ids (two <arrow id="120">, or a node id reused by a <t>)
+    ids = [e.get("id") for e in root.iter() if e.get("id")]
+    dups = [i for i, c in Counter(ids).items() if c > 1]
+    if dups:
+        problems.append(f"duplicate ids: {dups}")
+    # 2) bond-length spread across fragments (should be near-uniform)
+    def med_bond(fr):
+        pos = {n.get("id"): tuple(map(float, n.get("p").split()))
+               for n in fr.iter("n") if n.get("p")}
+        ds = [((pos[b.get('B')][0]-pos[b.get('E')][0])**2 +
+               (pos[b.get('B')][1]-pos[b.get('E')][1])**2)**0.5
+              for b in fr.iter("b") if b.get("B") in pos and b.get("E") in pos]
+        return statistics.median(ds) if ds else 0
+    bl = [round(med_bond(fr), 1) for fr in root.iter("fragment")]
+    # Flag only gross scale mismatches; deliberate emphasis (e.g. a larger
+    # cage) is fine, so use a loose threshold rather than demanding uniformity.
+    if bl and (max(bl) - min(bl)) > 0.35 * max(bl):
+        problems.append(f"gross bond-length mismatch across fragments: {bl}")
+    # 3) an <arrow> shorter than half a bond (degenerate)
+    for a in root.iter("arrow"):
+        if a.get("Head3D") and a.get("Tail3D"):
+            hx, hy, _ = map(float, a.get("Head3D").split())
+            tx, ty, _ = map(float, a.get("Tail3D").split())
+            if ((hx-tx)**2 + (hy-ty)**2)**0.5 < 15:
+                problems.append(f"degenerate arrow id={a.get('id')} (too short)")
+    return problems
+
+issues = lint_cdxml("scheme.cdxml")
+print("CLEAN" if not issues else "ISSUES:\n  " + "\n  ".join(issues))
+```
+
 ## Troubleshooting
 
 | Problem | Cause | Solution |
@@ -515,6 +597,10 @@ print(pretty.toprettyxml(indent="  ")[:1500])
 | Molecules in a scheme are different sizes | Fragments assembled at different bond lengths | Rescale each fragment to one bond length (≈30) before assembling; `rdDepictor.NormalizeDepiction` per mol |
 | Structures present but no reaction shown | Scheme has no `<arrow>`/`<graphic>` line objects | Add an arrow per step; wire ids in `<step>` if RDKit must re-read it as a reaction |
 | Parser error on text with `<`, `>`, `&` | Unescaped special characters in a `<s>` run | Escape as `&lt;` `&gt;` `&amp;` (automatic when using `ElementTree` `.text`) |
+| Stray line crosses a structure in the render | Duplicate or degenerate `<arrow>` (e.g. two `<arrow id="120">`, one tiny) | Run the lint recipe; give every arrow a unique id and a real length (Head3D≠Tail3D) |
+| Condition text overlaps atoms/structures | Text placed on the structure instead of clear of the arrow | Put conditions above (arrow y − ~15) and below (arrow y + ~15); leave horizontal gaps between fragments |
+| Same structure appears twice / floating duplicate | A fragment was copied (e.g. a "from above" continuation) | Remove the duplicate fragment; lint recipe flags repeated adjacent SMILES |
+| `render*` options ignored / no image | Indigo renderer not installed, or CDXML loaded as molecule when it has arrows | `pip install epam.indigo`; try `loadReaction` first, fall back to `loadMolecule` |
 
 ## Bundled Resources
 
@@ -532,3 +618,4 @@ print(pretty.toprettyxml(indent="  ")[:1500])
 - [RDKit `rdMolDraw2D` / depiction docs](https://www.rdkit.org/docs/source/rdkit.Chem.Draw.rdMolDraw2D.html) — 2D coordinate generation and CoordGen
 - [CDX/CDXML format specification (CambridgeSoft SDK mirror)](https://chemapps.stolaf.edu/iupac/cdx/sdk/) — object and property reference for arrows, graphics, reactions, and text
 - [RDKit CDXML test fixtures](https://github.com/rdkit/rdkit/tree/master/Code/GraphMol/test_data/CDXML) — real ChemDraw-authored `.cdxml` examples
+- [Indigo toolkit (`epam.indigo`)](https://lifescience.opensource.epam.com/indigo/) — CDX/CDXML loading and PNG/SVG rendering used in Module 9
