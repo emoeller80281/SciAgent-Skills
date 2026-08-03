@@ -335,8 +335,10 @@ tree.write("output_reaction.cdxml", encoding="unicode", xml_declaration=True)
 The `scripts/` files can be **read** from the skill path but **not imported** from there — they are not on the execution sandbox's import path. Copy the two you need into your working directory first, then import. Each script depends only on rdkit (+ epam.indigo), never on the other, so copy them independently:
 
 ```python
-# 1) Copy the helpers into the workdir (read_file is routed to the skill backend):
-_SKILL = "SciAgent-Skills/skills/structural-biology-drug-discovery/rdkit-chemdraw-cdxml/scripts"
+# 1) Copy the helpers into the workdir. Use the LEADING-SLASH skill path so the
+#    read routes to the skills backend (a path without the leading "/" is looked
+#    up in the sandbox workdir, where the file does not exist):
+_SKILL = "/SciAgent-Skills/skills/structural-biology-drug-discovery/rdkit-chemdraw-cdxml/scripts"
 for name in ("build_reaction_scheme.py", "check_scheme.py"):
     open(name, "w").write(read_file(f"{_SKILL}/{name}"))   # read_file = your file tool
 
