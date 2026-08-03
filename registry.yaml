@@ -1569,3 +1569,11 @@ entries:
     path: "skills/structural-biology-drug-discovery/mdtraj-trajectory-analysis/SKILL.md"
     description: "mdtraj molecular dynamics trajectory analysis (Python). Reads DCD/XTC/TRR/NetCDF/H5/PDB topologies and trajectories; computes RMSD vs time, radius of gyration, per-residue RMSF, residue-residue contact frequency maps, phi/psi torsions for Ramachandran plots (general + Gly/Pro), and 8-state DSSP secondary structure. Modules: trajectory I/O, geometry (distances/angles/dihedrals), structural analysis (RMSD/Rg/RMSF/SASA), contacts, hydrogen bonds, secondary structure (DSSP), NMR observables. For broader atom-selection grammar use mdanalysis-trajectory; for running MD simulations use OpenMM/GROMACS."
     date_added: "2026-05-28"
+
+  - name: "neb-irc-activation-energy"
+    type: skill
+    sub_type: pipeline
+    category: "scientific-computing"
+    path: "skills/scientific-computing/neb-irc-activation-energy/SKILL.md"
+    description: "NEB-IRC activation energy pipeline for reaction barriers using GFN2-xTB and pysisyphus. Optimize reactant and product geometries, run CI-NEB path search, optimize the transition state with a Hessian, verify with IRC (one imaginary mode, endpoints matching reactant/product, single NEB maximum), and report the electronic and Gibbs barriers. Use when you need a transition state, reaction barrier, activation energy, minimum energy path, or intrinsic reaction coordinate. Covers reactant/product atom-ordering pitfalls, feasibility sizing for single-core runs, and thermochemistry corrections. For 2D reaction scheme drawing use rdkit-chemdraw-cdxml."
+    date_added: "2026-08-03"
