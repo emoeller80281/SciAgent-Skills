@@ -378,7 +378,7 @@ print(f"Deliverables: {cdxml} + {png}")
 3. **Keep object ids globally unique.** Merging RDKit outputs (each starts at 1) collides and breaks `<step>` references and doubles arrows; renumber into disjoint blocks.
 4. **Prefer CDXML (text) over CDX (binary).** CDX write via `rdChemDraw` raises `UnicodeDecodeError`; only legacy `Chem.MolToCDXMLBlock(mol, CDXMLFormat.CDX)` returns valid CDX bytes.
 5. **Write a complete document header** — `<CDXML BondLength=...>` plus a standard `<fonttable>`/`<colortable>` and page dimensions. See `references/cdxml-schema-reference.md`.
-6. **Keep text ASCII** (font table is iso-8859-1); render heteroatoms via `<n Element=...>`, never as redundant free `<t>` text (which double-renders labels).
+6. **Keep text ASCII** (font table is iso-8859-1); render heteroatoms via `<n Element=...>`, never as redundant free `<t>` text. Do **not** add decorative flag words like "Chiral"/"racemic" — show stereochemistry with wedge bonds. Keep every label clear of the arrow line: compound names go under their structure, conditions go offset above/beside the arrow, never on it.
 7. **Deliver the CDXML and PNG together, and run `check_scheme.check_all` first.** The render and the critic catch overlaps, duplicate/degenerate arrows, dropped intermediates, and connectivity errors before the user sees them.
 
 ## Common Recipes
@@ -420,6 +420,9 @@ print(minidom.parseString(open("esterification.cdxml", encoding="utf-8").read())
 | Conditions text overlaps a structure | Text placed on the structure, not over the arrow gap | Center conditions over the arrow midpoint; widen structure spacing |
 | Text renders wrong/blank | non-ASCII, or `<s font>` id missing from `<fonttable>` | Keep text ASCII; reference an existing `font id` |
 | No PNG / render error | `epam.indigo` missing, or loaded as molecule when it has arrows | `pip install epam.indigo`; try `loadReaction` before `loadMolecule` |
+| "Chiral"/"racemic" printed above structures | Decorative flag text added as `<t>` | Remove it — stereochemistry is shown by wedge bonds; `check_scheme` flags it |
+| A name or label sits on an arrow | Text placed on the arrow line | Names go under the structure, conditions offset above/beside the arrow; `check_scheme` flags text on an arrow |
+| `stoi: no conversion` loading in Indigo | `<CDXML BondLength="">` empty | Set a numeric `BondLength` (e.g. `30`) before rendering |
 
 ## Bundled Resources
 
@@ -427,7 +430,7 @@ The `scripts/` files can be read from the skill path but **not imported from the
 
 - `references/cdxml-schema-reference.md` — element/attribute cheat-sheet (`n`, `b`, `arrow`, `graphic`, `step`/`scheme`, `t`/`s`, `fonttable`, `colortable`), coordinate conventions, enum tables, and a copy-paste document header.
 - `scripts/build_reaction_scheme.py` — assemble a multi-step scheme from `(smiles, name, conditions)` steps and render the PNG in one call; auto-sizes cells so structures never overlap. Library (`build_scheme(...)`) or CLI (`python build_reaction_scheme.py steps.json out.cdxml out.png "Title"`).
-- `scripts/check_scheme.py` — pre-delivery validator/critic. `check_all(path, expect=..., perspective_ids=...)` rebuilds each molecule from the drawing, sanitizes, prints formulas for a mass-balance check, and flags duplicate ids, overlaps, coincident/on-bond atoms, bond crossings, degenerate arrows, and non-ASCII text.
+- `scripts/check_scheme.py` — pre-delivery validator/critic. `check_all(path, expect=..., perspective_ids=...)` rebuilds each molecule from the drawing, sanitizes, prints formulas for a mass-balance check, and flags duplicate ids, fragment overlaps, degenerate arrows, non-ASCII text, decorative flag words ("Chiral"), and labels sitting on an arrow line.
 
 ## Related Skills
 

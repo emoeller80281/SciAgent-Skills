@@ -43,7 +43,10 @@ from rdkit.Chem import rdChemDraw, rdMolDescriptors
 BOND_MIN, BOND_MAX = 20.0, 45.0      # acceptable drawn bond-length window (units)
 COINCIDENT = 8.0                     # non-bonded atoms closer than this overlap
 ON_BOND = 6.0                        # atom-to-unrelated-bond distance that reads as "on it"
+ON_ARROW = 10.0                      # text-anchor-to-arrow-line distance that reads as overlapping
 CHAR_W = 5.5                         # approx width of one size-9 character (units)
+# Decorative stereo flags to keep out of schemes — draw wedge bonds instead.
+FLAG_WORDS = {"chiral", "achiral", "racemic", "(+/-)", "(±)", "meso"}
 
 
 def _atoms(frag):
@@ -194,7 +197,7 @@ def geometry_check(cdxml_path, perspective_ids=()):
     for aid, c in acount.items():
         if c > 1:
             problems.append(f"arrow id {aid} written {c} times")
-    arrow_spans = []
+    arrow_spans, arrow_segs = [], []
     for a in arrows:
         if a.get("Head3D") and a.get("Tail3D"):
             hx, hy, _ = map(float, a.get("Head3D").split())
@@ -203,20 +206,28 @@ def geometry_check(cdxml_path, perspective_ids=()):
             if L < 15:
                 problems.append(f"arrow {a.get('id')} degenerate (length {L:.1f})")
             arrow_spans.append(((hx + tx) / 2, (hy + ty) / 2, L))
+            arrow_segs.append(((tx, ty), (hx, hy)))
 
-    # text: non-ASCII, and conditions wider than the nearest arrow
+    # text: decorative flag words, non-ASCII, overlap with an arrow line, over-wide
     for t in root.iter("t"):
         s = "".join(x.text or "" for x in t.iter("s"))
+        if s.strip().lower() in FLAG_WORDS:
+            problems.append(f"decorative flag text '{s.strip()}' — remove it; show stereo with wedge bonds")
         try:
             s.encode("ascii")
         except UnicodeEncodeError:
             bad = [ch for ch in s if ord(ch) > 127]
             problems.append(f"text '{s[:25]}' has non-ASCII {bad} (font table is iso-8859-1)")
-        if t.get("p") and arrow_spans:
+        if t.get("p"):
             tx, ty = map(float, t.get("p").split())
-            mx, my, L = min(arrow_spans, key=lambda m: (m[0] - tx) ** 2 + (m[1] - ty) ** 2)
-            if abs(my - ty) < 40 and len(s) * CHAR_W > L * 1.4:
-                infos.append(f"text '{s[:25]}' (~{len(s)*CHAR_W:.0f}u) wider than its arrow ({L:.0f}u)")
+            for p0, p1 in arrow_segs:                       # text anchor sitting on an arrow line
+                if _seg_dist((tx, ty), p0, p1) < ON_ARROW:
+                    problems.append(f"text '{s[:25]}' overlaps an arrow (move it clear of the arrow line)")
+                    break
+            if arrow_spans:                                 # conditions text wider than its arrow
+                mx, my, L = min(arrow_spans, key=lambda m: (m[0] - tx) ** 2 + (m[1] - ty) ** 2)
+                if abs(my - ty) < 40 and len(s) * CHAR_W > L * 1.4:
+                    infos.append(f"text '{s[:25]}' (~{len(s)*CHAR_W:.0f}u) wider than its arrow ({L:.0f}u)")
 
     for p in problems:
         print(f"  ! {p}")

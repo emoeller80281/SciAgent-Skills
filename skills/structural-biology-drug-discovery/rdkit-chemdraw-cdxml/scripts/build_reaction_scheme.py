@@ -140,9 +140,12 @@ def build_scheme(steps, out_cdxml, out_png=None, title=None, cols=4):
         centers.append((cx, cy))
         bboxes.append(bbox)
         if step.get("name"):
+            # A structure that ends a row gets a vertical arrow out of its bottom;
+            # put its name ABOVE so the label never sits on that arrow.
+            vertical_source = (i % cols == cols - 1) and (i < len(built) - 1)
+            name_y = cy - bbox[1] - 22 if vertical_source else cy + bbox[1] + 34
             t = ET.SubElement(page, "t", {"id": str(new_obj()),
-                                          "p": f"{cx} {cy + bbox[1] + 34}",
-                                          "Justification": "Center"})
+                                          "p": f"{cx} {name_y}", "Justification": "Center"})
             ET.SubElement(t, "s", {"font": "21", "size": "10", "color": "0",
                                    "face": "0"}).text = step["name"]
 
