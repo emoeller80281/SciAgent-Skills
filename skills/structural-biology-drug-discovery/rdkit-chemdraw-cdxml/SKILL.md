@@ -32,10 +32,11 @@ A `.cdxml` is not viewable without ChemDraw, and **you cannot run ChemDraw here*
 
 - **Python packages**: `rdkit` (2023.03+, built with ChemDraw support), `epam.indigo` (renders CDXML→PNG); `xml.etree.ElementTree` (stdlib) handles all XML editing.
 - **Inputs**: SMILES/Mol for writing; `.cdxml` (UTF-8 text) or `.cdx` (binary) for reading.
-- **Check before installing.** RDKit is usually already present in a managed env — run `python -c "import rdkit"` first; inside pixi use `pixi run python ...`.
+- **Check before installing.** RDKit is usually already present — run `python -c "import rdkit"` first; inside pixi use `pixi run python ...`.
+- **Install `epam.indigo` into the interpreter that runs your code.** A bare `pip install` can land in a different Python than the kernel (e.g. system `/usr/local` vs the pixi env that has rdkit), so `import indigo` still fails even though the install "succeeded" — and no single interpreter then has both rdkit and indigo. In a Jupyter/IPython kernel use `%pip install epam.indigo`; otherwise `python -m pip install epam.indigo` (the running interpreter), or add it to the project env (`pixi add epam.indigo`). For the same reason, **do not run the build/render in a fresh `subprocess`** (`["python", …]` may resolve yet another interpreter) — import the helper and run it in the current process.
 
 ```bash
-pip install rdkit epam.indigo   # only if missing
+python -m pip install epam.indigo   # the running interpreter; or  %pip install epam.indigo  in Jupyter
 python -c "from rdkit import Chem; print('ChemDraw write support:', Chem.HasChemDrawCDXSupport())"
 ```
 
@@ -421,6 +422,7 @@ print(minidom.parseString(open("esterification.cdxml", encoding="utf-8").read())
 | A name or label sits on an arrow | Text placed on the arrow line | Names go under the structure, conditions offset above/beside the arrow; `check_scheme` flags text on an arrow |
 | `stoi: no conversion` loading in Indigo | `<CDXML BondLength="">` empty | Set a numeric `BondLength` (e.g. `30`) before rendering |
 | `ModuleNotFoundError`/`FileNotFoundError` on a helper script | `import`ed or `open()`ed the `/SciAgent-Skills/...` path from Python | That path is reachable only via the read-file tool, not the sandbox filesystem — copy the script into the workdir first (Workflow 4), then import |
+| `import indigo` fails after a "successful" `pip install` | pip installed into a different Python than the runtime (system `/usr/local` vs the pixi/kernel env) | Install into the running interpreter (`%pip install` or `python -m pip install`), or `pixi add epam.indigo`; don't shell out to a different `python` |
 | A charge (`H+`) renders as a giant `+` | Indigo draws a standalone `+` as a reaction-plus symbol, and superscript (face 64) mangles ion text | Keep charges inline (`H+`, `OH-`), face 0 — a true raised superscript is not achievable in the Indigo preview. Subscripts (face 32) and `°C`/`Δ` render fine |
 
 ## Bundled Resources
