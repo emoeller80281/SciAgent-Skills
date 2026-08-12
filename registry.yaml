@@ -55,20 +55,6 @@ entries:
     path: "skills/genomics-bioinformatics/biopython-sequence-analysis/SKILL.md"
     description: "Biopython sequence analysis workflows: SeqIO parsing (FASTA/FASTQ/GenBank/GFF), Entrez NCBI queries (esearch/efetch/elink), remote and local BLAST with result parsing, PairwiseAligner with substitution matrices, multiple sequence alignment (MUSCLE/ClustalW), and Phylo tree parsing/visualization. For PCR, restriction digestion, and cloning use biopython-molecular-biology."
     date_added: "2026-02-18"
-  - name: "rdkit-cheminformatics"
-    type: skill
-    sub_type: pipeline
-    category: "structural-biology-drug-discovery"
-    path: "skills/structural-biology-drug-discovery/rdkit-cheminformatics/SKILL.md"
-    description: "Cheminformatics toolkit for molecular analysis: SMILES/SDF parsing, descriptors, fingerprints, similarity search, substructure filtering, drug-likeness, 3D conformers"
-    date_added: "2026-02-16"
-  - name: "rdkit-chemdraw-cdxml"
-    type: skill
-    sub_type: toolkit
-    category: "structural-biology-drug-discovery"
-    path: "skills/structural-biology-drug-discovery/rdkit-chemdraw-cdxml/SKILL.md"
-    description: "Read, write, and edit ChemDraw CDX/CDXML files with rdkit.Chem.rdChemDraw plus direct XML editing. Parse molecules and reactions, write structures with good 2D depiction, and hand-build arrows, plus signs, reaction schemes, and text/labels that RDKit cannot write. Cross-domain (figure generation)."
-    date_added: "2026-08-01"
   - name: "gget-genomic-databases"
     type: skill
     sub_type: database
@@ -117,20 +103,6 @@ entries:
     category: "genomics-bioinformatics"
     path: "skills/genomics-bioinformatics/anndata-data-structure/SKILL.md"
     description: "Annotated data matrices for single-cell analysis. Create, read, write, subset, and concatenate AnnData objects (.h5ad). Use when handling single-cell data, integrating with scverse (Scanpy, scvi-tools), or managing large sparse matrices."
-    date_added: "2026-02-17"
-  - name: "cobrapy-metabolic-modeling"
-    type: skill
-    sub_type: toolkit
-    category: "systems-biology-multiomics"
-    path: "skills/systems-biology-multiomics/cobrapy-metabolic-modeling/SKILL.md"
-    description: "Constraint-based metabolic modeling with COBRApy. FBA, FVA, gene/reaction knockouts, flux sampling, media optimization, gapfilling on genome-scale metabolic models (SBML/JSON)."
-    date_added: "2026-02-17"
-  - name: "clinical-decision-support-documents"
-    type: skill
-    sub_type: guide
-    category: "scientific-writing"
-    path: "skills/scientific-writing/clinical-decision-support-documents/SKILL.md"
-    description: "Guidelines for clinical decision support documents: patient cohort analyses (biomarker-stratified outcomes) and treatment recommendation reports (GRADE-graded evidence). Document structure, evidence grading, statistical reporting."
     date_added: "2026-02-17"
   - name: "hypothesis-generation"
     type: skill
@@ -195,13 +167,6 @@ entries:
     path: "skills/genomics-bioinformatics/scvi-tools-single-cell/SKILL.md"
     description: "Deep generative models for single-cell omics. Probabilistic batch correction (scVI), semi-supervised annotation (scANVI), multi-modal integration (totalVI, MultiVI), differential expression with uncertainty. Unified setup→train→extract API."
     date_added: "2026-02-17"
-  - name: "flowio-flow-cytometry"
-    type: skill
-    sub_type: toolkit
-    category: "cell-biology"
-    path: "skills/cell-biology/flowio-flow-cytometry/SKILL.md"
-    description: "Parse and create FCS (Flow Cytometry Standard) files v2.0-3.1. Read event data as NumPy arrays, extract channel metadata, handle multi-dataset files. For advanced gating and compensation use FlowKit."
-    date_added: "2026-02-17"
   - name: "deeptools-ngs-analysis"
     type: skill
     sub_type: toolkit
@@ -215,20 +180,6 @@ entries:
     category: "biostatistics"
     path: "skills/biostatistics/scikit-survival-analysis/SKILL.md"
     description: "Survival analysis and time-to-event modeling. Cox proportional hazards, Random Survival Forests, Gradient Boosting, SVMs for censored data. C-index, Brier score, time-dependent AUC. Kaplan-Meier, competing risks. scikit-learn compatible."
-    date_added: "2026-02-17"
-  - name: "matlab-scientific-computing"
-    type: skill
-    sub_type: toolkit
-    category: "scientific-computing"
-    path: "skills/scientific-computing/matlab-scientific-computing/SKILL.md"
-    description: "MATLAB/GNU Octave numerical computing for matrix operations, linear algebra, differential equations, signal processing, optimization, statistics, and scientific visualization. Non-Python: code in MATLAB syntax."
-    date_added: "2026-02-17"
-  - name: "benchling-integration"
-    type: skill
-    sub_type: toolkit
-    category: "lab-automation"
-    path: "skills/lab-automation/benchling-integration/SKILL.md"
-    description: "Benchling R&D platform Python SDK. CRUD on registry entities (DNA, RNA, proteins), inventory management, ELN entries, workflow automation. Requires Benchling account and API key."
     date_added: "2026-02-17"
   - name: "lamindb-data-management"
     type: skill
@@ -265,13 +216,6 @@ entries:
     path: "skills/scientific-computing/zarr-python/SKILL.md"
     description: "Chunked, compressed N-dimensional array storage with Zarr. Create, read, write arrays with configurable chunking and compression. Cloud storage (S3, GCS, Azure), Dask parallel computing, Xarray integration. Format library for large scientific datasets."
     date_added: "2026-02-17"
-  - name: "scientific-slides"
-    type: skill
-    sub_type: guide
-    category: "scientific-writing"
-    path: "skills/scientific-writing/scientific-slides/SKILL.md"
-    description: "Create effective scientific presentations for conferences, seminars, thesis defenses, and grant pitches. Slide design principles, talk structure, timing, data visualization for slides, quality assurance. Works with PowerPoint and LaTeX Beamer."
-    date_added: "2026-02-17"
   - name: "polars-dataframes"
     type: skill
     sub_type: toolkit
@@ -294,28 +238,12 @@ entries:
     path: "skills/scientific-computing/exploratory-data-analysis/SKILL.md"
     description: "EDA methodology for scientific data files across 200+ formats. Decision framework for choosing analysis approaches by data type (tabular, sequence, image, spectral, structural, omics). Quality assessment, format detection, report generation."
     date_added: "2026-02-17"
-  - name: "datamol-cheminformatics"
-    type: skill
-    sub_type: toolkit
-    category: "structural-biology-drug-discovery"
-    path: "skills/structural-biology-drug-discovery/datamol-cheminformatics/SKILL.md"
-    description: "Pythonic RDKit wrapper for drug discovery. SMILES parsing, standardization, descriptors, fingerprints, similarity, Butina clustering, diversity selection, Murcko scaffolds, BRICS/RECAP fragmentation, 3D conformers, visualization. Prefer over raw RDKit for standard workflows."
-    date_added: "2026-02-17"
-
   - name: "shap-model-explainability"
     type: skill
     sub_type: pipeline
     category: "scientific-computing"
     path: "skills/scientific-computing/shap-model-explainability/SKILL.md"
     description: "Model interpretability using SHAP. Explainer selection (Tree, Deep, Linear, Kernel), feature attributions, visualization (waterfall, beeswarm, bar, scatter, force, heatmap). Model debugging, fairness analysis, feature importance comparison. Works with tree-based, deep learning, linear, and black-box models."
-    date_added: "2026-02-17"
-
-  - name: "geopandas-geospatial"
-    type: skill
-    sub_type: toolkit
-    category: "scientific-computing"
-    path: "skills/scientific-computing/geopandas-geospatial/SKILL.md"
-    description: "Geospatial vector data analysis extending pandas. Reading/writing Shapefile, GeoJSON, GeoPackage, Parquet, PostGIS. CRS management, geometric operations (buffer, simplify, centroid, affine), spatial joins, overlays, dissolve, clipping, distance. Choropleth maps, interactive maps with folium, basemaps."
     date_added: "2026-02-17"
 
   - name: "scikit-bio"
@@ -335,14 +263,6 @@ entries:
     date_added: "2026-02-17"
     tags: ["databases", "literature"]
 
-  - name: "medchem"
-    type: skill
-    sub_type: toolkit
-    category: "structural-biology-drug-discovery"
-    path: "skills/structural-biology-drug-discovery/medchem/SKILL.md"
-    description: "Medicinal chemistry filters for drug discovery. Drug-likeness rules (Lipinski, Veber, Oprea, CNS, leadlike, REOS, Golden Triangle, Ro3), structural alerts (PAINS, NIBR, Lilly Demerits), chemical groups (hinge binders, Michael acceptors), complexity metrics, property constraints, query language. Built on RDKit/datamol."
-    date_added: "2026-02-17"
-
   - name: "umap-learn"
     type: skill
     sub_type: toolkit
@@ -357,22 +277,6 @@ entries:
     category: "scientific-computing"
     path: "skills/scientific-computing/dask-parallel-computing/SKILL.md"
     description: "Distributed and parallel computing for larger-than-RAM datasets. Five components: DataFrames (parallel pandas), Arrays (parallel NumPy), Bags (unstructured data), Futures (task-based parallelism), Schedulers (threads/processes/distributed). Scales from laptops to HPC clusters. For in-memory speed use polars; for out-of-core single-machine use vaex."
-    date_added: "2026-02-17"
-
-  - name: "astropy-astronomy"
-    type: skill
-    sub_type: toolkit
-    category: "scientific-computing"
-    path: "skills/scientific-computing/astropy-astronomy/SKILL.md"
-    description: "Core Python library for astronomy and astrophysics. Units & quantities with dimensional analysis, celestial coordinate transformations (ICRS/Galactic/AltAz), FITS file handling, table operations, cosmological calculations (Planck18), precise time handling (UTC/TAI/TDB, barycentric corrections), WCS pixel-world mapping, model fitting, image visualization."
-    date_added: "2026-02-17"
-
-  - name: "simpy-discrete-event-simulation"
-    type: skill
-    sub_type: toolkit
-    category: "scientific-computing"
-    path: "skills/scientific-computing/simpy-discrete-event-simulation/SKILL.md"
-    description: "Process-based discrete-event simulation framework. Model systems with queues, shared resources, and time-based events: manufacturing lines, service operations, network traffic, logistics. Processes are Python generators that yield events. Resource types include capacity-limited (Resource, PriorityResource, PreemptiveResource), bulk material (Container), and object storage (Store, FilterStore). For continuous simulation use SciPy ODE solvers; for agent-based modeling use Mesa."
     date_added: "2026-02-17"
 
   - name: "torch-geometric-graph-neural-networks"
@@ -399,14 +303,6 @@ entries:
     description: "Unified Python interface to 40+ bioinformatics web services via bioservices library. Query UniProt proteins, KEGG pathways, ChEMBL/ChEBI/PubChem compounds, run BLAST searches, map identifiers across databases, retrieve GO annotations, and find protein-protein interactions. For single-database deep queries use dedicated tools (gget, pubchempy); bioservices excels at cross-database integration."
     date_added: "2026-02-17"
 
-  - name: "chembl-database-bioactivity"
-    type: skill
-    sub_type: database
-    category: "structural-biology-drug-discovery"
-    path: "skills/structural-biology-drug-discovery/chembl-database-bioactivity/SKILL.md"
-    description: "ChEMBL (2M+ compounds, 19M+ bioactivities, 13K+ targets) via REST/JSON with plain `requests` (no SDK). IC50/Ki/EC50 bioactivities, target inhibitors, SAR, drug mechanisms/indications."
-    date_added: "2026-02-17"
-
   - name: "string-database-ppi"
     type: skill
     sub_type: database
@@ -415,68 +311,12 @@ entries:
     description: "Query STRING REST API for protein-protein interactions (59M proteins, 20B interactions, 5000+ species). Retrieve interaction networks, perform GO/KEGG enrichment analysis, discover interaction partners, test PPI enrichment significance, generate network visualizations, and analyze protein homology for systems biology and pathway analysis."
     date_added: "2026-02-17"
 
-  - name: "clinicaltrials-database-search"
-    type: skill
-    sub_type: database
-    category: "structural-biology-drug-discovery"
-    path: "skills/structural-biology-drug-discovery/clinicaltrials-database-search/SKILL.md"
-    description: "Query ClinicalTrials.gov API v2 for clinical study data. Search trials by condition, drug/intervention, location, sponsor, or phase. Retrieve detailed study information by NCT ID. Filter by recruitment status, paginate large result sets, export to CSV. For clinical research, patient matching, drug development tracking, and trial portfolio analysis."
-    date_added: "2026-02-17"
-
-  - name: "molfeat-molecular-featurization"
-    type: skill
-    sub_type: toolkit
-    category: "structural-biology-drug-discovery"
-    path: "skills/structural-biology-drug-discovery/molfeat-molecular-featurization/SKILL.md"
-    description: "Molecular featurization hub (100+ featurizers) for ML. Convert SMILES to numerical representations via fingerprints (ECFP, MACCS, MAP4), descriptors (RDKit 2D, Mordred), pretrained models (ChemBERTa, GIN, Graphormer), and pharmacophore features. Scikit-learn compatible transformers with parallelization, caching, and state persistence. For QSAR, virtual screening, similarity search, and deep learning on molecules."
-    date_added: "2026-02-17"
-
-  - name: "pyopenms-mass-spectrometry"
-    type: skill
-    sub_type: toolkit
-    category: "proteomics-protein-engineering"
-    path: "skills/proteomics-protein-engineering/pyopenms-mass-spectrometry/SKILL.md"
-    description: "Mass spectrometry data processing with PyOpenMS. LC-MS/MS proteomics and metabolomics — mzML/mzXML file I/O, signal processing (smoothing, peak picking, centroiding), feature detection and linking across samples, peptide/protein identification with FDR control, untargeted metabolomics pipelines. For simple spectral matching use matchms."
-    date_added: "2026-02-17"
-
-  - name: "matchms-spectral-matching"
-    type: skill
-    sub_type: toolkit
-    category: "proteomics-protein-engineering"
-    path: "skills/proteomics-protein-engineering/matchms-spectral-matching/SKILL.md"
-    description: "Mass spectrometry spectral matching and metabolite identification with matchms. Import spectra (mzML, MGF, MSP, JSON), filter/normalize peaks, compute spectral similarity (cosine, modified cosine, fingerprint), build reproducible processing pipelines, identify metabolites from spectral libraries. For full LC-MS/MS proteomics pipelines use pyopenms."
-    date_added: "2026-02-17"
-
-  - name: "pytdc-therapeutics-data-commons"
-    type: skill
-    sub_type: database
-    category: "structural-biology-drug-discovery"
-    path: "skills/structural-biology-drug-discovery/pytdc-therapeutics-data-commons/SKILL.md"
-    description: "Therapeutics Data Commons (TDC) — AI-ready drug discovery dataset platform. Access curated ADME, toxicity, DTI, DDI datasets with scaffold/cold splits, standardized evaluation metrics (5-seed protocol), molecular oracles for optimization, and ADMET benchmark groups. For chemical database queries use chembl-database-bioactivity; for molecular featurization use molfeat."
-    date_added: "2026-02-17"
-
-  - name: "histolab-wsi-processing"
-    type: skill
-    sub_type: toolkit
-    category: "medical-imaging"
-    path: "skills/medical-imaging/histolab-wsi-processing/SKILL.md"
-    description: "Whole slide image processing for digital pathology. Tissue detection, tile extraction (random, grid, score-based), filter pipelines for H&E/IHC preprocessing. Use for dataset preparation, tile-based deep learning, and slide quality assessment. For advanced spatial proteomics or multiplexed imaging use pathml."
-    date_added: "2026-02-17"
-
   - name: "vaex-dataframes"
     type: skill
     sub_type: toolkit
     category: "scientific-computing"
     path: "skills/scientific-computing/vaex-dataframes/SKILL.md"
     description: "Out-of-core DataFrame library for billion-row datasets using lazy evaluation and memory-mapped files. Use when data exceeds available RAM (10 GB to terabytes) and needs fast aggregation, filtering, virtual columns, and visualization without loading into memory. Supports HDF5, Apache Arrow, Parquet, CSV I/O with cloud storage (S3, GCS, Azure). Built-in ML transformers (scaling, encoding, PCA, K-means) with scikit-learn bridge. For in-memory speed use polars; for distributed computing use dask."
-    date_added: "2026-02-17"
-
-  - name: "drugbank-database-access"
-    type: skill
-    sub_type: database
-    category: "structural-biology-drug-discovery"
-    path: "skills/structural-biology-drug-discovery/drugbank-database-access/SKILL.md"
-    description: "Parse and query DrugBank local XML database for drug information, interactions, targets, and chemical properties. Search drugs by ID/name/CAS, extract drug-drug interactions with severity, map targets/enzymes/transporters, compute molecular similarity from SMILES. Primary access via local XML (downloaded); REST API available but rate-limited. For live bioactivity queries use chembl-database-bioactivity; for compound property lookups use pubchem-compound-search."
     date_added: "2026-02-17"
 
   - name: "arboreto-grn-inference"
@@ -519,14 +359,6 @@ entries:
     description: "LLM-driven hypothesis generation and testing on tabular datasets. Three methods: HypoGeniC (data-driven), HypoRefine (literature+data synergy), Union (mechanistic combination). Iterative refinement, Redis caching, multi-hypothesis inference."
     date_added: "2026-02-17"
 
-  - name: "metabolomics-workbench-database"
-    type: skill
-    sub_type: database
-    category: "proteomics-protein-engineering"
-    path: "skills/proteomics-protein-engineering/metabolomics-workbench-database/SKILL.md"
-    description: "Query Metabolomics Workbench REST API (4,200+ studies, NIH-funded) for metabolite identification, study discovery, RefMet name standardization, MS m/z precursor ion searches, MetStat study filtering, and gene/protein annotations."
-    date_added: "2026-02-17"
-
   - name: "ena-database"
     type: skill
     sub_type: database
@@ -549,22 +381,6 @@ entries:
     category: "systems-biology-multiomics"
     path: "skills/systems-biology-multiomics/reactome-database/SKILL.md"
     description: "Query Reactome pathway database via REST API. Pathway queries, entity retrieval, keyword search, gene list enrichment analysis, pathway hierarchy, cross-references. Content Service and Analysis Service. For KEGG pathways use kegg-database; for protein interactions use string-database-ppi."
-    date_added: "2026-02-17"
-
-  - name: "pydicom-medical-imaging"
-    type: skill
-    sub_type: toolkit
-    category: "medical-imaging"
-    path: "skills/medical-imaging/pydicom-medical-imaging/SKILL.md"
-    description: "Pure Python DICOM library for medical imaging (CT, MRI, X-ray, ultrasound). Read/write DICOM files, extract pixel data as NumPy arrays, access/modify metadata tags, apply windowing (VOI LUT), anonymize PHI, build DICOM from scratch, process series into 3D volumes. For whole-slide pathology use histolab; for NIfTI neuroimaging use nibabel."
-    date_added: "2026-02-17"
-
-  - name: "deepchem"
-    type: skill
-    sub_type: toolkit
-    category: "structural-biology-drug-discovery"
-    path: "skills/structural-biology-drug-discovery/deepchem/SKILL.md"
-    description: "Deep learning framework for drug discovery and materials science. 60+ models (GCN, GAT, AttentiveFP, MPNN, DMPNN, ChemBERTa, GROVER), 50+ molecular featurizers, MoleculeNet benchmarks, hyperparameter optimization, transfer learning. Unified load-featurize-split-train-evaluate API. For fingerprint-only cheminformatics use rdkit-cheminformatics; for featurization hub without training use molfeat-molecular-featurization."
     date_added: "2026-02-17"
 
   - name: "ensembl-database"
@@ -597,30 +413,6 @@ entries:
     category: "genomics-bioinformatics"
     path: "skills/genomics-bioinformatics/geo-database/SKILL.md"
     description: "Query NCBI Gene Expression Omnibus (GEO) for gene expression datasets and sample metadata via GEOparse Python library and E-utilities. Search datasets by keyword/organism/platform, download GSE series matrices, parse GPL platform annotations, extract GSM sample metadata, and load expression matrices into pandas. For single-cell data use cellxgene-census; for programmatic multi-DB access use gget-genomic-databases."
-    date_added: "2026-02-18"
-
-  - name: "opentargets-database"
-    type: skill
-    sub_type: database
-    category: "structural-biology-drug-discovery"
-    path: "skills/structural-biology-drug-discovery/opentargets-database/SKILL.md"
-    description: "Query Open Targets Platform GraphQL API for target-disease associations, evidence scores, drug-target links, and safety data. Search targets by gene symbol, diseases by EFO ID, retrieve evidence scores from 20+ data sources, drug mechanisms, and tractability assessments. For ChEMBL bioactivity use chembl-database-bioactivity; for clinical trials use clinicaltrials-database-search."
-    date_added: "2026-02-18"
-
-  - name: "zinc-database"
-    type: skill
-    sub_type: database
-    category: "structural-biology-drug-discovery"
-    path: "skills/structural-biology-drug-discovery/zinc-database/SKILL.md"
-    description: "Query ZINC15/ZINC22 virtual compound libraries for drug discovery. Search purchasable lead-like, fragment-like, and drug-like compounds by molecular weight, logP, reactivity class, or SMILES similarity. Download 3D compound sets for docking, retrieve SMILES for in-silico screening. ZINC20 contains 1.4B compounds; purchasable subset is 750M. For bioactivity data use chembl-database-bioactivity; for approved drugs use drugbank-database-access."
-    date_added: "2026-02-18"
-
-  - name: "fda-database"
-    type: skill
-    sub_type: database
-    category: "structural-biology-drug-discovery"
-    path: "skills/structural-biology-drug-discovery/fda-database/SKILL.md"
-    description: "Query openFDA REST API for drug adverse event reports (FAERS), drug labeling, product information, recalls, and enforcement actions. Search by drug name, active ingredient, adverse event term (MedDRA), or NDC code. No API key needed for 1000 req/day; free key for 120,000 req/day. For clinical trial data use clinicaltrials-database-search; for drug structures use drugbank-database-access or chembl-database-bioactivity."
     date_added: "2026-02-18"
 
   - name: "openalex-database"
@@ -665,52 +457,12 @@ entries:
     description: "ClinPGx (formerly PharmGKB) REST + CPIC PostgREST companion: clinical annotations, CPIC/DPWG dosing guidelines, variant-drug associations, FDA/EMA labels. Two hosts: api.clinpgx.org + api.cpicpgx.org. No auth."
     date_added: "2026-02-18"
 
-  - name: "imaging-data-commons"
-    type: skill
-    sub_type: database
-    category: "medical-imaging"
-    path: "skills/medical-imaging/imaging-data-commons/SKILL.md"
-    description: "Query NCI Imaging Data Commons (IDC) for cancer radiology and pathology imaging datasets hosted on Google Cloud. Search DICOM collections by modality, anatomical site, cancer type, or collection name. Download images via Google Cloud Storage or IDAT tool. 50TB+ of publicly accessible DICOM images. Requires Google Cloud account for large downloads; small queries work without billing. For local DICOM processing use pydicom-medical-imaging; for whole-slide pathology use histolab."
-    date_added: "2026-02-18"
-
-  - name: "protocolsio-integration"
-    type: skill
-    sub_type: database
-    category: "lab-automation"
-    path: "skills/lab-automation/protocolsio-integration/SKILL.md"
-    description: "Access protocols.io public library via REST API. Search and retrieve experimental protocols (wet-lab, bioinformatics, clinical) by keyword, DOI, or category. Download step-by-step protocol content including reagents, materials, equipment, and timing. Free public access; authentication needed for private protocols or publishing. Use alongside opentrons-protocol-api or benchling-integration to programmatically execute downloaded protocols."
-    date_added: "2026-02-18"
-
-  - name: "omero-integration"
-    type: skill
-    sub_type: toolkit
-    category: "medical-imaging"
-    path: "skills/medical-imaging/omero-integration/SKILL.md"
-    description: "OMERO is an open-source platform for biological image data management. Use the omero-py Python client to connect to an OMERO server, search and retrieve images as numpy arrays, annotate images with tags and key-value pairs, manage ROIs, and integrate OMERO image data into downstream analysis pipelines — all programmatically without the OMERO desktop GUI."
-    date_added: "2026-02-18"
-
-  - name: "pathml"
-    type: skill
-    sub_type: pipeline
-    category: "medical-imaging"
-    path: "skills/medical-imaging/pathml/SKILL.md"
-    description: "PathML is an open-source toolkit for computational pathology. Use it to process whole-slide images (WSIs): load slides, extract tiles, apply stain normalization and nuclear segmentation preprocessing, extract features, and train machine learning models. Supports H&E and multiplex imaging. Ideal for building end-to-end digital pathology pipelines from raw WSI files to quantitative outputs."
-    date_added: "2026-02-18"
-
   - name: "scientific-visualization"
     type: skill
     sub_type: guide
     category: "data-visualization"
     path: "skills/data-visualization/scientific-visualization/SKILL.md"
     description: "Guide for choosing and creating scientific visualizations for publications and presentations. Covers selecting chart types for different data structures, color theory for accessibility and print, figure composition, journal-specific formatting requirements (Nature, Cell, ACS), and common pitfalls that undermine scientific credibility. Consult this guide when deciding how to visualize your data or preparing figures for submission."
-    date_added: "2026-02-18"
-
-  - name: "etetoolkit"
-    type: skill
-    sub_type: toolkit
-    category: "genomics-bioinformatics"
-    path: "skills/genomics-bioinformatics/etetoolkit/SKILL.md"
-    description: "ETE Toolkit (ETE3) is a Python environment for phylogenetic tree analysis, manipulation, and visualization. Parse Newick/NHX/PhyloXML trees, traverse and annotate nodes, render publication-quality figures with TreeStyle/NodeStyle, integrate NCBI taxonomy for taxon-aware operations, and run PhyloTree workflows for comparative genomics. Use for building species trees, gene family evolution analysis, and annotated tree figures."
     date_added: "2026-02-18"
 
   - name: "geniml"
@@ -727,22 +479,6 @@ entries:
     category: "genomics-bioinformatics"
     path: "skills/genomics-bioinformatics/gtars/SKILL.md"
     description: "GTARS is a Rust-backed Python library for fast genomic token arithmetic and BED file processing. Perform high-performance BED file I/O, genomic interval set operations (intersect, merge, complement, subtract), tokenization of genomic regions against a universe, and universe construction. Use for preprocessing large BED file collections, building token vocabularies for ML pipelines, and computing interval statistics at scale."
-    date_added: "2026-02-18"
-
-  - name: "pylabrobot"
-    type: skill
-    sub_type: toolkit
-    category: "lab-automation"
-    path: "skills/lab-automation/pylabrobot/SKILL.md"
-    description: "PyLabRobot is a hardware-agnostic Python library for liquid handling robots. Use it to write portable automation scripts that run on Hamilton STAR, Tecan Freedom EVO, Opentrons OT-2, or a simulation backend — without vendor lock-in. Ideal for protocol automation, method development, plate reformatting, serial dilutions, and integrating liquid handlers into larger Python-based lab workflows."
-    date_added: "2026-02-18"
-
-  - name: "uspto-database"
-    type: skill
-    sub_type: database
-    category: "scientific-computing"
-    path: "skills/scientific-computing/uspto-database/SKILL.md"
-    description: "Access US Patent and Trademark Office (USPTO) patent data via the PatentsView REST API and Google Patents Public Data (BigQuery). Use it to search patents by inventor, assignee, CPC classification, or keywords; download full patent metadata and claims; analyze patent portfolios; and track technology trends. Ideal for IP landscape analysis, competitor monitoring, prior art searches, and technology forecasting in life sciences and biotech."
     date_added: "2026-02-18"
 
   - name: "citation-management"
@@ -777,54 +513,6 @@ entries:
     description: "DiffDock is a diffusion-based molecular docking tool that predicts protein-ligand binding poses without requiring a predefined binding site. Use it when the binding site is unknown, when traditional docking fails, or when exploring multiple binding modes. Pipeline: prepare protein (PDB) and ligand (SMILES/SDF) inputs → run DiffDock inference → analyze confidence-ranked poses → visualize in PyMOL or NGLview."
     date_added: "2026-02-18"
 
-  - name: "rowan"
-    type: skill
-    sub_type: toolkit
-    category: "structural-biology-drug-discovery"
-    path: "skills/structural-biology-drug-discovery/rowan/SKILL.md"
-    description: "Rowan is a cloud-based computational chemistry platform providing quantum chemistry calculations via a Python SDK. Use it to run geometry optimization, conformer generation, torsional scans, and energy minimization with DFT or semiempirical methods, and retrieve molecular properties (dipole moment, partial charges, frontier orbital energies) — without managing local quantum chemistry software or HPC clusters."
-    date_added: "2026-02-18"
-
-  - name: "torchdrug"
-    type: skill
-    sub_type: toolkit
-    category: "structural-biology-drug-discovery"
-    path: "skills/structural-biology-drug-discovery/torchdrug/SKILL.md"
-    description: "TorchDrug is a PyTorch-based machine learning platform for drug discovery. Use it for graph-based molecular representation learning, molecular property prediction (ADMET, activity), retrosynthesis prediction, drug-target interaction (DTI) modeling, and pretraining on large molecular datasets. Provides GNN layers (GraphConv, GAT, MPNN), pretrained models, and benchmark datasets in a unified PyTorch-compatible API."
-    date_added: "2026-02-18"
-
-  - name: "pymoo"
-    type: skill
-    sub_type: toolkit
-    category: "scientific-computing"
-    path: "skills/scientific-computing/pymoo/SKILL.md"
-    description: "pymoo is a Python framework for single- and multi-objective optimization using evolutionary algorithms. Define problems as vectorized objective functions and constraints, then solve with NSGA-II, NSGA-III, MOEA/D, genetic algorithms, or differential evolution. Analyze Pareto fronts, visualize trade-off surfaces, and customize operators and callbacks. Ideal for engineering design, hyperparameter search, process optimization, and any problem with multiple conflicting objectives. Alternatives: scipy.optimize (single-objective, gradient-based), platypus (fewer algorithms), jMetalPy (Java-based, more algorithms)."
-    date_added: "2026-02-18"
-
-  - name: "pymatgen"
-    type: skill
-    sub_type: toolkit
-    category: "scientific-computing"
-    path: "skills/scientific-computing/pymatgen/SKILL.md"
-    description: "pymatgen (Python Materials Genomics) is a materials science Python library for structure analysis, thermodynamics, and electronic property calculation. Parse and create crystal structures (CIF, POSCAR, CIF), query the Materials Project database for DFT-computed properties, analyze phase diagrams and pourbaix diagrams, compute X-ray diffraction patterns, and generate DFT input files for VASP, Quantum ESPRESSO, and CP2K. Alternatives: ASE (Atomic Simulation Environment) for MD/geometry; AFLOW for high-throughput; OVITO for visualization."
-    date_added: "2026-02-18"
-
-  - name: "neurokit2"
-    type: skill
-    sub_type: toolkit
-    category: "scientific-computing"
-    path: "skills/scientific-computing/neurokit2/SKILL.md"
-    description: "NeuroKit2 is a Python toolkit for neurophysiological signal processing. Process ECG (heart rate, HRV, R-peak detection), EEG (complexity, power spectral density), EMG (muscle activation onset), EDA/GSR (skin conductance, SCR decomposition), PPG (photoplethysmography), and RSP (respiration) signals. Simulate synthetic signals for testing. Alternatives: BioSPPy (older, less maintained), MNE (EEG/MEG specialist), heartpy (ECG only), scipy.signal (raw DSP without biosignal abstraction)."
-    date_added: "2026-02-18"
-
-  - name: "aeon"
-    type: skill
-    sub_type: toolkit
-    category: "scientific-computing"
-    path: "skills/scientific-computing/aeon/SKILL.md"
-    description: "aeon is a scikit-learn compatible Python toolkit for time series machine learning and data mining. Classify, cluster, regress, segment, and transform time series using 30+ algorithms including ROCKET, InceptionTime, KNN-DTW, HIVE-COTE, and WEASEL. Supports panel (multi-instance), multivariate, and unequal-length time series. Designed as the maintained successor to sktime. Alternatives: sktime (older, larger ecosystem), tslearn (less algorithms), catch22 (feature extraction only)."
-    date_added: "2026-02-18"
-
   - name: "transformers-bio-nlp"
     type: skill
     sub_type: toolkit
@@ -833,36 +521,12 @@ entries:
     description: "Use HuggingFace Transformers with biomedical language models for scientific NLP tasks. Load BioBERT, PubMedBERT, BioGPT, and BioMedLM for named entity recognition (genes, diseases, chemicals), relation extraction, question answering on biomedical literature, text classification, and abstract summarization. Covers model loading, tokenization of biomedical text, inference pipelines, and fine-tuning on domain-specific datasets. Alternatives: spaCy with en_core_sci_lg (rule-based NER), Stanza (Stanford NLP, biomedical models), NLTK (classical NLP)."
     date_added: "2026-02-18"
 
-  - name: "neuropixels-analysis"
-    type: skill
-    sub_type: pipeline
-    category: "scientific-computing"
-    path: "skills/scientific-computing/neuropixels-analysis/SKILL.md"
-    description: "Pipeline for analyzing Neuropixels extracellular electrophysiology recordings. Covers probe geometry loading (ProbeInterface), spike sorting with Kilosort via SpikeInterface, quality metrics computation, unit curation (ISI violations, firing rate, signal-to-noise), and post-sort analysis (PSTH, tuning curves, population decoding) using pandas and matplotlib. Designed for acute and chronic Neuropixels 1.0/2.0/Ultra recordings from rodent and primate experiments."
-    date_added: "2026-02-18"
-
-  - name: "adaptyv-bio"
-    type: skill
-    sub_type: toolkit
-    category: "proteomics-protein-engineering"
-    path: "skills/proteomics-protein-engineering/adaptyv-bio/SKILL.md"
-    description: "Adaptyv Bio provides an API and Python SDK for ordering and managing cell-free protein expression and binding assay experiments. Use it to submit protein sequences for expression (scale 10–100 µg), characterize binding affinity (KD) against target proteins, track experiment status, and retrieve results — all programmatically without wet-lab setup. Designed for protein engineers, ML-guided directed evolution, and antibody/nanobody optimization workflows. Requires an Adaptyv Bio account and API key."
-    date_added: "2026-02-18"
-
   - name: "scientific-schematics"
     type: skill
     sub_type: guide
     category: "scientific-writing"
     path: "skills/scientific-writing/scientific-schematics/SKILL.md"
     description: "Guide for designing and creating scientific schematics, diagrams, and graphical abstracts. Covers tool selection (BioRender, Inkscape, Affinity Designer, PowerPoint), design principles for biological pathway diagrams, molecular mechanism schematics, experimental workflow diagrams, and graphical abstracts for journal submissions. Includes composition rules, icon sourcing, color usage for biological entities, and accessibility considerations. Use when planning or creating a scientific figure that is primarily illustrative rather than data-driven."
-    date_added: "2026-02-18"
-
-  - name: "pyhealth"
-    type: skill
-    sub_type: toolkit
-    category: "scientific-computing"
-    path: "skills/scientific-computing/pyhealth/SKILL.md"
-    description: "PyHealth is a Python library for healthcare machine learning. Build clinical prediction models from EHR (Electronic Health Record) data: process MIMIC-III/IV, eICU, and OMOP-CDM datasets, encode medical codes (ICD, ATC, NDC), construct patient-level datasets, and train models (Transformer, RETAIN, GRASP, MedBERT) for tasks including mortality prediction, drug recommendation, readmission, and diagnosis prediction. Alternatives: FIDDLE (EHR preprocessing only), clinical-longformer (NLP on clinical notes only), ehr-ml (EHR embedding only)."
     date_added: "2026-02-18"
 
   - name: "samtools-bam-processing"
@@ -905,14 +569,6 @@ entries:
     description: "Aggregates QC outputs from 150+ bioinformatics tools into a single interactive HTML report. Scans directories for FastQC, samtools, STAR, HISAT2, Trim Galore, featureCounts, Kallisto, Salmon, Picard, and GATK logs; merges statistics across samples with interactive plots. Essential for NGS pipeline QC review. Use FastQC directly for single-sample initial assessment; MultiQC is for multi-sample pipeline-wide reporting."
     date_added: "2026-02-18"
 
-  - name: "scikit-image-processing"
-    type: skill
-    sub_type: toolkit
-    category: "cell-biology"
-    path: "skills/cell-biology/scikit-image-processing/SKILL.md"
-    description: "Python image processing library for scientific microscopy and bioimage analysis. Read/write multi-format images, apply filters (Gaussian, median, LoG), segment objects (thresholding, watershed, active contours), measure region properties (area, intensity, shape), and detect features. Part of the SciPy ecosystem. Use OpenCV for real-time video processing; use CellPose for deep-learning cell segmentation; use napari for interactive visualization."
-    date_added: "2026-02-18"
-
   - name: "star-rna-seq-aligner"
     type: skill
     sub_type: pipeline
@@ -945,28 +601,12 @@ entries:
     description: "Gene set enrichment analysis (GSEA) and over-representation analysis (ORA) for RNA-seq and proteomics data. Wraps Enrichr API for ORA against MSigDB, KEGG, GO, and 200+ gene set databases; implements preranked GSEA for ranked gene lists from differential expression. Outputs enrichment tables and GSEA running-score plots. Use after DESeq2 or edgeR for pathway-level interpretation of differential expression results."
     date_added: "2026-02-18"
 
-  - name: "cellpose-cell-segmentation"
-    type: skill
-    sub_type: pipeline
-    category: "cell-biology"
-    path: "skills/cell-biology/cellpose-cell-segmentation/SKILL.md"
-    description: "Deep learning cell and nucleus segmentation from fluorescence and brightfield microscopy images. Uses pre-trained models (cyto3, nuclei, tissuenet) and a generalist flow-based algorithm that segments cells without requiring retraining on new image types. Outputs label masks for downstream morphology measurement and tracking. Use scikit-image watershed for rule-based segmentation; use Cellpose when deep learning generalization across staining conditions is needed."
-    date_added: "2026-02-18"
-
   - name: "bwa-mem2-dna-aligner"
     type: skill
     sub_type: pipeline
     category: "genomics-bioinformatics"
     path: "skills/genomics-bioinformatics/bwa-mem2-dna-aligner/SKILL.md"
     description: "Fast short-read DNA aligner for whole-genome, whole-exome, and ChIP-seq alignment to a reference genome. BWA-MEM2 is the 2× faster successor to BWA-MEM; outputs SAM/BAM with read group headers required by GATK. Produces primary alignments with supplementary records for chimeric reads. Use STAR instead for RNA-seq splice-aware alignment; use Bowtie2 as an alternative with comparable accuracy."
-    date_added: "2026-02-18"
-
-  - name: "napari-image-viewer"
-    type: skill
-    sub_type: toolkit
-    category: "cell-biology"
-    path: "skills/cell-biology/napari-image-viewer/SKILL.md"
-    description: "Interactive multi-dimensional image viewer for scientific microscopy data. Napari displays 2D/3D/4D arrays as Image, Labels, Points, Shapes, and Tracks layers; supports real-time annotation, plugin-based analysis, and headless screenshot export. Core visualization tool for bioimage analysis workflows. Use ImageJ/FIJI for macro-based processing; use napari for Python-native interactive visualization and plugin-based deep learning segmentation review."
     date_added: "2026-02-18"
 
   - name: "fastp-fastq-preprocessing"
@@ -985,14 +625,6 @@ entries:
     description: "Counts aligned RNA-seq reads overlapping gene features in a GTF annotation. Takes sorted BAM files from STAR alignment and a GTF file; outputs a tab-delimited count matrix per gene across all samples. Handles strandedness (0=unstranded, 1=stranded, 2=reverse-stranded), paired-end, and multi-sample batch counting in a single command. Use Salmon instead for alignment-free quantification; use featureCounts when STAR BAMs already exist and a gene-level count matrix is needed."
     date_added: "2026-02-18"
 
-  - name: "mdanalysis-trajectory"
-    type: skill
-    sub_type: toolkit
-    category: "structural-biology-drug-discovery"
-    path: "skills/structural-biology-drug-discovery/mdanalysis-trajectory/SKILL.md"
-    description: "Python library for analyzing molecular dynamics (MD) trajectories from GROMACS, AMBER, NAMD, CHARMM, and LAMMPS. Reads topology and trajectory files into Universe objects; supports RMSD, RMSF, radius of gyration, contact maps, hydrogen bond analysis, PCA, and custom distance/angle calculations across millions of frames. Use for structural analysis after MD simulations; use OpenMM or GROMACS directly for running simulations."
-    date_added: "2026-02-18"
-
   - name: "plink2-gwas-analysis"
     type: skill
     sub_type: pipeline
@@ -1009,14 +641,6 @@ entries:
     description: "GATK Best Practices pipeline for germline SNP and indel variant calling from WGS/WES BAM files. Runs HaplotypeCaller in GVCF mode per sample, consolidates with GenomicsDBImport, joint-genotypes with GenotypeGVCFs, and applies VQSR or hard filters. Requires BWA-MEM2-aligned, markdup, and BQSR-processed BAMs. Use DeepVariant instead for a faster deep-learning alternative; GATK is the ENCODE/NIH standard for research and clinical genomics."
     date_added: "2026-02-18"
 
-  - name: "opencv-bioimage-analysis"
-    type: skill
-    sub_type: toolkit
-    category: "cell-biology"
-    path: "skills/cell-biology/opencv-bioimage-analysis/SKILL.md"
-    description: "Computer vision library for bio-image preprocessing, feature detection, and real-time microscopy analysis. Performs color space conversion, morphological operations, contour/blob detection, template matching, and optical flow on fluorescence and brightfield images. 10-100× faster than pure Python implementations using optimized C++ kernels. Use scikit-image for scientific morphometry and regionprops; use OpenCV for real-time processing, video, and classical feature extraction pipelines."
-    date_added: "2026-02-18"
-
   - name: "nextflow-workflow-engine"
     type: skill
     sub_type: toolkit
@@ -1031,22 +655,6 @@ entries:
     category: "systems-biology-multiomics"
     path: "skills/systems-biology-multiomics/mofaplus-multi-omics/SKILL.md"
     description: "Multi-Omics Factor Analysis v2 (MOFA+) with mofapy2. Jointly decompose multiple omics layers (scRNA-seq, ATAC-seq, proteomics, methylation) into latent factors capturing major sources of biological variation. Supports multi-group designs (patients, conditions). Pipeline: prepare AnnData views → create MOFA object → train → inspect variance explained → correlate factors with metadata → visualize and cluster → enrichment of top loadings."
-    date_added: "2026-02-18"
-
-  - name: "trackpy-particle-tracking"
-    type: skill
-    sub_type: toolkit
-    category: "cell-biology"
-    path: "skills/cell-biology/trackpy-particle-tracking/SKILL.md"
-    description: "Python library for single-particle tracking (SPT) in video microscopy using the Crocker-Grier algorithm. Locates fluorescent spots with subpixel accuracy, links positions into trajectories, filters short tracks, and computes mean squared displacement (MSD) and diffusion coefficients. Supports 2D and 3D tracking, drift correction, and motion classification (confined, Brownian, directed). Integrates with pims for TIF stacks, AVI, and image series. Use TrackMate instead when you need a GUI or manual track curation."
-    date_added: "2026-02-18"
-
-  - name: "spikeinterface-electrophysiology"
-    type: skill
-    sub_type: toolkit
-    category: "scientific-computing"
-    path: "skills/scientific-computing/spikeinterface-electrophysiology/SKILL.md"
-    description: "Unified Python framework for extracellular electrophysiology. Load recordings from 20+ formats (SpikeGLX, OpenEphys, NWB, Intan, Maxwell, Blackrock), preprocess signals, run 10+ spike sorters (Kilosort4, SpykingCircus2, Tridesclous, MountainSort5) with a single API, compute quality metrics (SNR, ISI violations, firing rate, amplitude cutoff), compare sorter outputs, and export to NWB or Phy. Use for format-agnostic and multi-sorter workflows. For Neuropixels-specific Kilosort4 workflows use neuropixels-analysis."
     date_added: "2026-02-18"
 
   - name: "seaborn-statistical-plots"
@@ -1081,14 +689,6 @@ entries:
     description: "Multi-modal single-cell analysis with muon and MuData. Joint RNA+ATAC (10x Multiome), CITE-seq (RNA+protein), and other multi-omics combinations. MuData container holds modality-specific AnnData objects with shared obs. Weighted Nearest Neighbor (WNN) graph for joint embedding, per-modality preprocessing, cross-modal factor analysis with MOFA. Use scanpy-scrna-seq for single-modality RNA analysis; use muon when combining two or more omics modalities from the same cells."
     date_added: "2026-02-18"
 
-  - name: "pyimagej-fiji-bridge"
-    type: skill
-    sub_type: toolkit
-    category: "cell-biology"
-    path: "skills/cell-biology/pyimagej-fiji-bridge/SKILL.md"
-    description: "Python bridge to ImageJ2/Fiji for macro execution, plugin calls (Bio-Formats, TrackMate, Analyze Particles), bidirectional NumPy↔ImagePlus/ImgLib2 data exchange, and ImageJ Ops from Python. Use for automating Fiji-specific workflows headlessly. Use scikit-image for pure Python pipelines without Fiji plugins; use napari for interactive visualization."
-    date_added: "2026-02-18"
-
   - name: "cellchat-cell-communication"
     type: skill
     sub_type: pipeline
@@ -1121,44 +721,12 @@ entries:
     description: "Annotate and filter genetic variants in VCF files with SnpEff (functional effect prediction: HIGH/MODERATE/LOW/MODIFIER impact, gene, HGVS) and SnpSift (filter by impact, AF, ClinVar pathogenicity; add dbSNP rsIDs; extract fields to TSV). Java CLI with Python cyvcf2 integration. Use ANNOVAR for multi-database annotation; use Ensembl VEP for REST API annotation."
     date_added: "2026-02-18"
 
-  - name: "maxquant-proteomics"
-    type: skill
-    sub_type: pipeline
-    category: "proteomics-protein-engineering"
-    path: "skills/proteomics-protein-engineering/maxquant-proteomics/SKILL.md"
-    description: "MaxQuant + Perseus proteomics pipeline: configure and run MaxQuant for LFQ and SILAC; parse proteinGroups.txt; filter contaminants/decoys; log2-transform and median-normalize LFQ intensities; impute MNAR missing values; t-test with BH FDR correction; volcano plot; GO/pathway enrichment. Use Proteome Discoverer for Thermo instrument-native processing; FragPipe/MSFragger for GPU-accelerated database search."
-    date_added: "2026-02-18"
-
-  - name: "opentrons-protocol-api"
-    type: skill
-    sub_type: toolkit
-    category: "lab-automation"
-    path: "skills/lab-automation/opentrons-protocol-api/SKILL.md"
-    description: "Python Protocol API v2 for Opentrons OT-2 and Flex liquid handling robots. Deck setup, pipette operations (aspirate/dispense/transfer/distribute/consolidate), labware and liquid tracking, hardware module control (thermocycler, heater-shaker, magnetic, temperature). Simulate locally with opentrons_simulate before uploading. Use PyLabRobot for multi-vendor (Hamilton, Tecan) portability."
-    date_added: "2026-02-18"
-
-  - name: "viennarna-structure-prediction"
-    type: skill
-    sub_type: pipeline
-    category: "molecular-biology"
-    path: "skills/molecular-biology/viennarna-structure-prediction/SKILL.md"
-    description: "Predict RNA secondary structure, minimum free energy (MFE) folding, base pair probabilities, and RNA-RNA interactions using ViennaRNA Python bindings. Pipeline: load sequence → compute MFE structure → calculate partition function and base pair probability matrix → visualize dot-bracket notation → assess RNA-RNA duplex formation. Use for siRNA/sgRNA targeting, ribozyme design, and RNA accessibility analysis. Use mfold or RNAfold CLI directly for batch command-line use without Python."
-    date_added: "2026-03-08"
-
   - name: "popv-cell-annotation"
     type: skill
     sub_type: toolkit
     category: "genomics-bioinformatics"
     path: "skills/genomics-bioinformatics/popv-cell-annotation/SKILL.md"
     description: "Consensus cell type annotation by running 10+ algorithms (KNN-Harmony, KNN-BBKNN, KNN-Scanorama, KNN-scVI, CellTypist, ONCLASS, Random Forest, SCANVI, SVM, XGBoost) on a labeled reference and transferring labels to a query dataset via majority voting. popV produces per-method labels, an overall consensus prediction, and an agreement score quantifying confidence across methods. Use when single-method annotation is insufficient or when you need ensemble uncertainty estimates for novel cell states."
-    date_added: "2026-03-08"
-
-  - name: "sgrna-design-guide"
-    type: skill
-    sub_type: guide
-    category: "molecular-biology"
-    path: "skills/molecular-biology/sgrna-design-guide/SKILL.md"
-    description: "Decision guide for finding or designing sgRNAs using a three-tiered strategy: (1) validated sequences from Addgene or literature, (2) pre-computed designs from the Broad Institute CRISPick database, (3) de novo design with CRISPOR/Benchling as a last resort. Covers PAM requirements for SpCas9, SaCas9, AsCas12a, and enAsCas12a; sgRNA quality metrics; application-specific targeting rules for knockout, CRISPRa, CRISPRi, base editing, and prime editing; and computational filtering criteria. Use when planning any CRISPR experiment and unsure which sgRNA source or design approach to use."
     date_added: "2026-03-08"
 
   - name: "cnvkit-copy-number"
@@ -1169,14 +737,6 @@ entries:
     description: "Detect somatic copy number variants (CNVs) from WES, WGS, or targeted sequencing BAM files with CNVkit v0.9.x. Pipeline: calculate bin-level coverage in target/antitarget regions, normalize against a reference, segment copy ratios with CBS or HMM, call amplifications and deletions, generate scatter/diagram plots, estimate tumor purity and ploidy, and export to VCF/SEG. Both CLI and Python API (cnvlib) shown. Use GATK CNV instead for deep WGS with population-scale controls; use CNVkit for targeted or exome sequencing where antitarget bins are critical."
     date_added: "2026-03-08"
 
-  - name: "plannotate-plasmid-annotation"
-    type: skill
-    sub_type: pipeline
-    category: "molecular-biology"
-    path: "skills/molecular-biology/plannotate-plasmid-annotation/SKILL.md"
-    description: "Automatically annotate plasmid sequences with functional features (promoters, terminators, resistance genes, origins of replication, tags, fluorescent proteins) using BLAST-based detection against curated databases (Addgene, fpbase, SnapGene). Accepts FASTA or raw sequence; outputs annotated GenBank files, interactive HTML maps, and CSV feature tables. Handles circular topology correctly. Use for verifying synthetic plasmid construction, preparing Addgene submissions, sharing plasmid maps, or batch-annotating a cloning library."
-    date_added: "2026-03-08"
-
   - name: "remap-database"
     type: skill
     sub_type: database
@@ -1185,28 +745,12 @@ entries:
     description: "Query the ReMap 2022 TF ChIP-seq binding peak database via REST API and BED file downloads. Retrieve all TF binding peaks overlapping a genomic region (chr:start-end), find TF peaks near a gene by name, list TFs available for a species, filter peaks by regulatory biotype (promoter, enhancer), and download peak BED files for a TF-cell type pair. Use for TF co-occupancy analysis, regulatory region annotation, and building TF binding atlases. For JASPAR motif matrices use jaspar-database; for ENCODE regulatory tracks use encode-database."
     date_added: "2026-03-08"
 
-  - name: "interpro-database"
-    type: skill
-    sub_type: database
-    category: "proteomics-protein-engineering"
-    path: "skills/proteomics-protein-engineering/interpro-database/SKILL.md"
-    description: "Query the InterPro REST API for protein domain architecture, family classification, and member database integration. Search InterPro entries by name or accession, retrieve all domains in a protein (domain architecture), list proteins in a family, get taxonomic distribution, and link to PDB structures. Integrates Pfam, PANTHER, PIRSF, PRINTS, PROSITE, SMART, CDD, and NCBIfam into a unified hierarchy. For protein sequence and Swiss-Prot annotations use uniprot-protein-database; for experimental 3D structures use pdb-database."
-    date_added: "2026-03-08"
-
   - name: "prokka-genome-annotation"
     type: skill
     sub_type: pipeline
     category: "genomics-bioinformatics"
     path: "skills/genomics-bioinformatics/prokka-genome-annotation/SKILL.md"
     description: "Annotate prokaryotic genome assemblies (bacteria, archaea, viruses) with Prokka's BLAST/HMM-based pipeline. Identifies CDS, rRNA, tRNA, tmRNA, and signal peptides against Pfam, TIGRFAMs, and RefSeq databases. Produces GFF3, GenBank, protein FASTA, and TSV outputs. Use PGAP instead when submitting to NCBI GenBank; use Bakta for faster annotation with NCBI-compatible outputs on modern assemblies."
-    date_added: "2026-03-08"
-
-  - name: "simpleitk-image-registration"
-    type: skill
-    sub_type: toolkit
-    category: "medical-imaging"
-    path: "skills/medical-imaging/simpleitk-image-registration/SKILL.md"
-    description: "Register, segment, filter, and resample 3D medical images (MRI, CT, microscopy) using SimpleITK's Python API with support for DICOM, NIfTI, and multi-modal image analysis. Provides rigid/affine/deformable registration, threshold and region-growing segmentation, Gaussian and morphological filtering, label statistics, and format conversion. Use when aligning volumetric images across timepoints or modalities, automating segmentation of fluorescence microscopy, or converting DICOM series to NIfTI for analysis pipelines."
     date_added: "2026-03-08"
 
   - name: "celltypist-cell-annotation"
@@ -1233,28 +777,12 @@ entries:
     description: "De novo motif discovery and known TF motif enrichment in ChIP-seq and ATAC-seq peak sets using HOMER. findMotifsGenome.pl searches for over-represented sequence patterns against a background; annotatePeaks.pl assigns genomic context (TSS distance, gene, repeat). Use after MACS3 peak calling to identify which transcription factors are enriched in your peaks, annotate peaks with nearest genes, and validate ChIP-seq quality by checking the target TF's own motif."
     date_added: "2026-03-08"
 
-  - name: "emdb-database"
-    type: skill
-    sub_type: database
-    category: "structural-biology-drug-discovery"
-    path: "skills/structural-biology-drug-discovery/emdb-database/SKILL.md"
-    description: "Search and retrieve cryo-EM density maps, fitted atomic models, and metadata from the Electron Microscopy Data Bank (EMDB) REST API. Query by keyword, resolution, method, or organism; fetch entry details, map download URLs, associated PDB models, and publications. No authentication required. For experimental atomic coordinates use pdb-database; for AlphaFold predicted structures use alphafold-database-access."
-    date_added: "2026-03-08"
-
   - name: "mouse-phenome-database"
     type: skill
     sub_type: database
     category: "genomics-bioinformatics"
     path: "skills/genomics-bioinformatics/mouse-phenome-database/SKILL.md"
     description: "Retrieve quantitative phenotype measurements across inbred mouse strains from the Mouse Phenome Database (MPD) for metabolic, behavioral, and physiological traits. Query strain means and raw individual measurements for body weight, glucose, blood pressure, behavioral assays, and 40+ additional procedures. Use for QTL analysis support, cross-strain phenotype comparison, and identifying mouse models for metabolic or behavioral traits. For mouse gene-disease-phenotype associations use monarch-database; for mouse genome annotations use ensembl-database."
-    date_added: "2026-03-08"
-
-  - name: "nnunet-segmentation"
-    type: skill
-    sub_type: pipeline
-    category: "medical-imaging"
-    path: "skills/medical-imaging/nnunet-segmentation/SKILL.md"
-    description: "Train and deploy automated medical image segmentation models using nnU-Net's self-configuring framework that auto-selects optimal architecture, preprocessing, and training for any modality. Supports CT, MRI, microscopy, and ultrasound with 2D, 3D full-res, 3D low-res, and cascade configurations. Pipeline: convert dataset → plan and preprocess → train (5-fold cross-validation) → find best configuration → predict → ensemble. Use when classical segmentation fails and annotated training data is available."
     date_added: "2026-03-08"
 
   - name: "jaspar-database"
@@ -1271,38 +799,6 @@ entries:
     category: "systems-biology-multiomics"
     path: "skills/systems-biology-multiomics/libsbml-network-modeling/SKILL.md"
     description: "Build, read, validate, and modify SBML biological network models using libSBML Python API. Supports all SBML Levels (1–3), reactions with kinetic laws, species/compartments, rules (assignment/rate/algebraic), the FBC extension for flux balance analysis models, and model conversion utilities. Integrates with COBRApy, Tellurium/RoadRunner, and COPASI for simulation. Use when programmatically constructing ODE-based or constraint-based metabolic/signaling models in the standard SBML format."
-    date_added: "2026-03-08"
-
-  - name: "ddinter-database"
-    type: skill
-    sub_type: database
-    category: "structural-biology-drug-discovery"
-    path: "skills/structural-biology-drug-discovery/ddinter-database/SKILL.md"
-    description: "Query drug-drug interaction (DDI) data from DDInter via REST API. Search interactions by drug name or ID, retrieve severity levels (major/moderate/minor), interaction mechanisms, and clinical recommendations for drug pairs. Covers 1.7M+ interactions across 2,400+ drugs. No authentication required. For FDA drug labeling use dailymed-database; for pharmacogenomics use clinpgx-database."
-    date_added: "2026-03-08"
-
-  - name: "dailymed-database"
-    type: skill
-    sub_type: database
-    category: "structural-biology-drug-discovery"
-    path: "skills/structural-biology-drug-discovery/dailymed-database/SKILL.md"
-    description: "Query FDA-approved drug labeling from DailyMed (NLM) via REST API. Search structured product labels (SPLs) by drug name, NDC code, set ID, or RxCUI. Retrieve indications, contraindications, dosage, warnings, adverse reactions, and packaging information. No authentication required. For adverse event reports use fda-database; for drug-drug interactions use ddinter-database."
-    date_added: "2026-03-08"
-
-  - name: "gtopdb-database"
-    type: skill
-    sub_type: database
-    category: "structural-biology-drug-discovery"
-    path: "skills/structural-biology-drug-discovery/gtopdb-database/SKILL.md"
-    description: "Query the IUPHAR/BPS Guide to Pharmacology (GtoPdb) REST API for receptor-ligand interaction data, target pharmacology, and quantitative affinity metrics. Retrieve pKi/pIC50/pEC50 values, ligand classifications (approved drugs, biologics, natural products), target families (GPCRs, ion channels, nuclear receptors, kinases), and selectivity profiles across the pharmacological target space."
-    date_added: "2026-03-08"
-
-  - name: "pride-database"
-    type: skill
-    sub_type: database
-    category: "proteomics-protein-engineering"
-    path: "skills/proteomics-protein-engineering/pride-database/SKILL.md"
-    description: "Search and retrieve proteomics datasets, peptide identifications, and mass spectrometry raw data files from the PRIDE Archive REST API. Find experiments by organism, tissue, disease, or instrument; download RAW/mzML files; retrieve peptide and PSM identifications; access protein-level evidence. For protein domain architecture use interpro-database; for protein sequences and annotations use uniprot-protein-database."
     date_added: "2026-03-08"
 
   - name: "gnomad-database"
@@ -1369,14 +865,6 @@ entries:
     description: "Query disease-gene-phenotype associations, entity details, and cross-species orthology from the Monarch Initiative knowledge graph REST API. Retrieve MONDO disease-to-gene and disease-to-phenotype mappings, HP phenotype profiles, and cross-species phenotype comparisons. Use for rare disease gene prioritization, phenotype-based candidate gene ranking, and building disease-phenotype networks. For GWAS associations use gwas-database; for clinical pathogenicity use clinvar-database."
     date_added: "2026-03-08"
 
-  - name: "unichem-database"
-    type: skill
-    sub_type: database
-    category: "structural-biology-drug-discovery"
-    path: "skills/structural-biology-drug-discovery/unichem-database/SKILL.md"
-    description: "Cross-reference chemical compound identifiers across 50+ databases (ChEMBL, DrugBank, PubChem, ChEBI, PDB, KEGG) using the UniChem REST API. Resolve InChIKeys to database-specific IDs, find all sources for a compound, discover related compounds by structural connectivity, and batch-translate compound lists between naming systems. No authentication required."
-    date_added: "2026-03-08"
-
   - name: "ucsc-genome-browser"
     type: skill
     sub_type: database
@@ -1425,28 +913,12 @@ entries:
     description: "Guide to mandatory quality filtering of raw/unfiltered VCF files before computing summary statistics such as Ts/Tv ratio, variant counts, or allele frequency distributions. Covers detection of raw VCFs, QUAL-based filtering with bcftools, and when NOT to filter."
     date_added: "2026-03-31"
 
-  - name: "western-blot-quantification"
-    type: skill
-    sub_type: guide
-    category: "lab-automation"
-    path: "skills/lab-automation/western-blot-quantification/SKILL.md"
-    description: "Guide to quantitative Western blot analysis covering band detection, two-step normalization, fold change calculation, statistical aggregation across biological replicates, and publication-ready visualization."
-    date_added: "2026-03-31"
-
   - name: "scientific-literature-search"
     type: skill
     sub_type: guide
     category: "scientific-writing"
     path: "skills/scientific-writing/scientific-literature-search/SKILL.md"
     description: "Systematic strategies for searching, retrieving, and analyzing scientific literature across PubMed, arXiv, Google Scholar, and AI-assisted tools. Covers the PICO framework, three-tiered search strategy, PubMed field tags, and content extraction workflows."
-    date_added: "2026-03-31"
-
-  - name: "sar-analysis"
-    type: skill
-    sub_type: guide
-    category: "structural-biology-drug-discovery"
-    path: "skills/structural-biology-drug-discovery/sar-analysis/SKILL.md"
-    description: "Guide for performing Structure-Activity Relationship (SAR) analysis using RDKit. Covers core scaffold identification via MCS, R-group decomposition, molecular alignment for visualization, activity heatmap generation, and interpretive SAR text output."
     date_added: "2026-03-31"
 
   - name: "kegg-pathway-analysis"
@@ -1497,14 +969,6 @@ entries:
     description: "Figure and image preparation guide for PNAS. Covers resolution (300-1000 PPI by type), file formats (TIFF, EPS, PDF), strict RGB-only color mode, Arial/Helvetica fonts, italicized uppercase panel labels, and automated image screening."
     date_added: "2026-04-01"
 
-  - name: "cancer-research-figure-guide"
-    type: skill
-    sub_type: guide
-    category: "scientific-writing"
-    path: "skills/scientific-writing/cancer-research-figure-guide/SKILL.md"
-    description: "Figure and image preparation guide for Cancer Research (AACR). Covers resolution (300-1200 DPI), file formats (EPS, TIFF, AI), hierarchical panel labeling (Ai, Aii, Bi), figure/table limits, and legend requirements including replicate counts."
-    date_added: "2026-04-01"
-
   - name: "lancet-figure-guide"
     type: skill
     sub_type: guide
@@ -1537,14 +1001,6 @@ entries:
     description: "General scientific figure quality checklist for generated plots. Covers visual inspection for overlapping labels, clipped text, missing axes/legends, empty plot areas, overcrowded data, and resolution/format best practices across journals."
     date_added: "2026-04-01"
 
-  - name: "bakta-genome-annotation"
-    type: skill
-    sub_type: pipeline
-    category: "genomics-bioinformatics"
-    path: "skills/genomics-bioinformatics/bakta-genome-annotation/SKILL.md"
-    description: "Annotate bacterial and archaeal genomes and plasmids with Bakta's Prodigal/HMM/DIAMOND pipeline against a curated UniRef-derived database. Identifies CDS, ncRNA, tRNA, rRNA, tmRNA, sORFs, CRISPR arrays, and replication origins. Produces NCBI-compatible GFF3, GenBank, EMBL, FASTA, JSON, TSV, and a circular Circos plot. Use Prokka for legacy pipelines or non-bacterial kingdoms; PGAP for NCBI GenBank submission; Bakta for faster, regularly updated annotation."
-    date_added: "2026-05-08"
-
   - name: "roary-pangenome"
     type: skill
     sub_type: pipeline
@@ -1553,19 +1009,3 @@ entries:
     description: "Compute the bacterial pan-genome from Prokka/Bakta GFF3 annotations with Roary's CD-HIT + BLASTP + MCL clustering pipeline. Outputs the gene presence/absence matrix, core/soft-core/shell/cloud partitions, a non-redundant pan-genome reference FASTA, and an optional concatenated core-gene alignment for phylogenetics. Use Panaroo for fragmented assemblies or noisy annotations; PIRATE for paralog-aware multi-threshold clustering; PPanGGOLiN for graph-based statistical partitioning."
     date_added: "2026-05-08"
 
-
-  - name: "smina-molecular-docking"
-    type: skill
-    sub_type: pipeline
-    category: "structural-biology-drug-discovery"
-    path: "skills/structural-biology-drug-discovery/smina-molecular-docking/SKILL.md"
-    description: "smina molecular docking CLI. AutoDock Vina fork with customizable scoring functions, native SDF/MOL2/PDB ligand input, autoboxing, local energy minimization, and per-atom score breakdowns. Pipeline: receptor PDBQT prep -> ligand prep (RDKit/OpenBabel) -> dock via autobox or explicit grid -> rescore/minimize with custom scoring -> rank poses by affinity. Choose smina over Vina when you need custom scoring terms (--custom_scoring), local optimization of an existing pose (--local_only), per-atom contributions (--atom_term_data), or SDF/MOL2 ligands without manual PDBQT conversion. For unknown binding sites use diffdock; for the Python-bindings/Vinardo workflow use autodock-vina-docking."
-    date_added: "2026-05-28"
-
-  - name: "mdtraj-trajectory-analysis"
-    type: skill
-    sub_type: toolkit
-    category: "structural-biology-drug-discovery"
-    path: "skills/structural-biology-drug-discovery/mdtraj-trajectory-analysis/SKILL.md"
-    description: "mdtraj molecular dynamics trajectory analysis (Python). Reads DCD/XTC/TRR/NetCDF/H5/PDB topologies and trajectories; computes RMSD vs time, radius of gyration, per-residue RMSF, residue-residue contact frequency maps, phi/psi torsions for Ramachandran plots (general + Gly/Pro), and 8-state DSSP secondary structure. Modules: trajectory I/O, geometry (distances/angles/dihedrals), structural analysis (RMSD/Rg/RMSF/SASA), contacts, hydrogen bonds, secondary structure (DSSP), NMR observables. For broader atom-selection grammar use mdanalysis-trajectory; for running MD simulations use OpenMM/GROMACS."
-    date_added: "2026-05-28"
