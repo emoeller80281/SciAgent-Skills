@@ -1,6 +1,6 @@
 ---
 name: pnas-figure-guide
-description: "PNAS figure preparation: resolution (300-1000 PPI), formats (TIFF/EPS/PDF), strict RGB-only color, Arial/Helvetica fonts, italicized uppercase panel labels, automated image screening."
+description: "PNAS figures: 300-1000 PPI, TIFF/EPS/PDF, RGB-only, Arial/Helvetica, italic uppercase panel labels, image screening."
 license: CC-BY-4.0
 compatibility: Python 3.10+, Pillow, Matplotlib
 metadata:

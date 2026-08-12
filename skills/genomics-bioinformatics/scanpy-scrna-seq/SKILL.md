@@ -1,6 +1,6 @@
 ---
 name: "scanpy-scrna-seq"
-description: "scRNA-seq with Scanpy: QC, normalization, HVG selection, PCA, neighborhood graph, UMAP/t-SNE, Leiden clustering, markers, cell annotation, trajectory inference. Standard scRNA-seq exploration."
+description: "scRNA-seq with Scanpy: QC, normalization, HVG selection, PCA, neighbor graph, UMAP/t-SNE, Leiden clustering, markers."
 license: "CC-BY-4.0"
 ---
 

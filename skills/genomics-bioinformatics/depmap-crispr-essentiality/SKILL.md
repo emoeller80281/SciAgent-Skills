@@ -1,6 +1,6 @@
 ---
 name: depmap-crispr-essentiality
-description: "DepMap CRISPR gene effect (Chronos) analysis: sign convention for essentiality, per-gene NaN-safe Spearman correlation, data loading/alignment. For general NaN-safe correlation see nan-safe-correlation; for quality filtering see degenerate-input-filtering."
+description: "DepMap CRISPR gene effect (Chronos): essentiality sign convention, per-gene NaN-safe Spearman, data loading/alignment."
 license: CC-BY-4.0
 ---
 

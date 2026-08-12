@@ -1,6 +1,6 @@
 ---
 name: nature-figure-guide
-description: "Nature figure preparation: resolution (300+ DPI), formats (AI/EPS/TIFF), RGB color, Helvetica/Arial fonts, lowercase panel labels, image integrity requirements."
+description: "Nature figures: 300+ DPI, AI/EPS/TIFF, RGB, Helvetica/Arial, lowercase panel labels, image integrity requirements."
 license: CC-BY-4.0
 compatibility: Python 3.10+, Pillow, Matplotlib
 metadata:

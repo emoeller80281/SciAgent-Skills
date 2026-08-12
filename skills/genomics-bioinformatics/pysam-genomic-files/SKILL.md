@@ -1,6 +1,6 @@
 ---
 name: pysam-genomic-files
-description: "Read/write SAM/BAM/CRAM, VCF/BCF, FASTA/FASTQ. Region queries, pileup, variant filtering, read groups. Python htslib wrapper exposing samtools/bcftools CLI. Use STAR/BWA for alignment; GATK/DeepVariant for variant calling."
+description: "Python htslib wrapper for SAM/BAM/CRAM, VCF/BCF, FASTA/FASTQ: region queries, pileup, variant filtering, read groups."
 license: MIT
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: dask-parallel-computing
-description: "Parallel/distributed computing for larger-than-RAM data. Components: DataFrames (parallel pandas), Arrays (parallel NumPy), Bags, Futures, Schedulers. Scales laptop to HPC cluster. For single-machine speed use polars; for out-of-core without cluster use vaex."
+description: "Parallel/distributed computing beyond RAM: DataFrames, Arrays, Bags, Futures, schedulers; scales laptop to HPC cluster."
 license: BSD-3-Clause
 ---
 

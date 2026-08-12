@@ -1,6 +1,6 @@
 ---
 name: "multiqc-qc-reports"
-description: "Aggregates QC from 150+ bioinformatics tools into one interactive HTML report. Scans FastQC, samtools, STAR, HISAT2, Trim Galore, featureCounts, Kallisto, Salmon, Picard, GATK logs; merges per-sample stats with plots. For NGS pipeline-wide QC. Use FastQC directly for single-sample; MultiQC for multi-sample reporting."
+description: "Aggregate QC from 150+ tools into one HTML report: FastQC, samtools, STAR, featureCounts, Salmon, Picard, GATK logs."
 license: "GPL-3.0"
 ---
 

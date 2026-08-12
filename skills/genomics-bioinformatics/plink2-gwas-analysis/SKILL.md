@@ -1,6 +1,6 @@
 ---
 name: "plink2-gwas-analysis"
-description: "GWAS and population genetics tool. Processes PLINK (.bed/.bim/.fam), VCF, and BGEN; runs QC (MAF, HWE, missingness), IBD estimation, PCA, and linear/logistic regression GWAS. Outputs Manhattan-ready summary stats. Use regenie or SAIGE for biobanks (>100k samples) needing mixed models."
+description: "GWAS and population genetics on .bed/VCF/BGEN: QC (MAF, HWE, missingness), IBD, PCA, linear/logistic association."
 license: "GPL-3.0"
 ---
 

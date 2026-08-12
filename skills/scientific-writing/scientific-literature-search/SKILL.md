@@ -1,6 +1,6 @@
 ---
 name: scientific-literature-search
-description: "Systematic strategies for searching scientific literature across PubMed, arXiv, Google Scholar, and AI-assisted tools. Covers PICO framework for clinical questions, three-tiered search (database-specific, AI-assisted, content extraction), PubMed field tags and MeSH, boolean query construction, and full-text extraction. Use when planning a literature search or choosing a search tier."
+description: "Literature search across PubMed, arXiv, Scholar: PICO framework, MeSH/field tags, Boolean queries, full-text extraction."
 license: CC-BY-4.0
 ---
 

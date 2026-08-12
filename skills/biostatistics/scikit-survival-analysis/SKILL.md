@@ -1,6 +1,6 @@
 ---
 name: scikit-survival-analysis
-description: "Time-to-event modeling with scikit-survival: Cox PH (elastic net), Random Survival Forests, Boosting, SVMs for censored data. C-index, Brier, time-dependent AUC; Kaplan-Meier, Nelson-Aalen, competing risks. Pipeline/GridSearchCV compatible. Use statsmodels for frequentist, pymc for Bayesian, lifelines for parametric."
+description: "Censored time-to-event ML: Cox PH elastic net, Random Survival Forests, boosting, SVM; C-index, Brier, time AUC."
 license: GPL-3.0
 ---
 

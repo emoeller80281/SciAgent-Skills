@@ -1,6 +1,6 @@
 ---
 name: hypothesis-generation
-description: "Structured hypothesis formulation: turn observations into testable hypotheses with predictions, propose mechanisms, design experiments. Follows the scientific method. Use scientific-brainstorming for open ideation; hypogenic for automated LLM hypothesis testing on datasets."
+description: "Turn observations into testable hypotheses: predictions, candidate mechanisms, and experimental design."
 license: CC-BY-4.0
 ---
 

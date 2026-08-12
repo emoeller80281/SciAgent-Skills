@@ -1,6 +1,6 @@
 ---
 name: "snpeff-variant-annotation"
-description: "Annotate and filter VCF variants with SnpEff and SnpSift. SnpEff predicts functional effects (HIGH/MODERATE/LOW/MODIFIER), genes, transcripts, AA changes, HGVS; SnpSift filters and adds ClinVar/dbSNP. Java CLI with Python subprocess integration. Use ANNOVAR for multi-database annotation; Ensembl VEP for REST API; SnpEff for fast CLI with pre-built genomes."
+description: "Annotate and filter VCFs with SnpEff/SnpSift: HIGH/MODERATE/LOW effects, transcripts, AA changes, HGVS, ClinVar/dbSNP."
 license: "MIT"
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: "salmon-rna-quantification"
-description: "Ultra-fast RNA-seq transcript/gene quantification via quasi-mapping (no BAM). Builds a k-mer index from transcriptome FASTA, quantifies in minutes. Outputs TPM/count tables (quant.sf) with optional GC- and sequence-bias correction. Integrates with tximeta/tximport for DESeq2/edgeR. Use STAR when a genome-aligned BAM is needed."
+description: "Quasi-mapping RNA-seq quantification without BAM: k-mer index, TPM/count quant.sf, GC and sequence-bias correction."
 license: "GPL-3.0"
 ---
 

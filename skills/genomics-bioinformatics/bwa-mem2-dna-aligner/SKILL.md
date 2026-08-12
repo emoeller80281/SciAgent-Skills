@@ -1,6 +1,6 @@
 ---
 name: "bwa-mem2-dna-aligner"
-description: "Fast short-read DNA aligner for WGS/WES/ChIP-seq. 2× faster BWA-MEM successor; outputs SAM/BAM with read group headers for GATK. Primary plus supplementary records for chimeric reads. Use STAR for RNA-seq splice-aware alignment; Bowtie2 is a comparable alternative."
+description: "Short-read DNA aligner for WGS/WES/ChIP-seq; 2x faster than BWA-MEM, SAM/BAM with read groups for GATK, chimeric reads."
 license: "MIT"
 ---
 

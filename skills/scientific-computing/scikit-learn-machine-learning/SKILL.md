@@ -1,6 +1,6 @@
 ---
 name: "scikit-learn-machine-learning"
-description: "Classical ML in Python: classification, regression, clustering, dim reduction, evaluation, tuning, preprocessing pipelines. Linear models, tree ensembles, SVMs, K-Means, PCA, t-SNE. Use PyTorch/TF for deep learning; XGBoost/LightGBM for scale."
+description: "Classical ML: classification, regression, clustering, dimensionality reduction, tuning, pipelines, ensembles, PCA, t-SNE."
 license: "BSD-3-Clause"
 ---
 

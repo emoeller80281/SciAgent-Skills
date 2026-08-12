@@ -1,6 +1,6 @@
 ---
 name: "macs3-peak-calling"
-description: "Poisson-model peak caller for ChIP-seq/ATAC-seq BAMs. MACS3 callpeak finds enriched regions (TF sites or histone marks) vs input/IgG; outputs BED narrowPeak/broadPeak for motif analysis, annotation, and differential binding. Use narrow peaks for TF ChIP-seq and ATAC-seq; broad for H3K27me3, H3K9me3, and other broad marks."
+description: "Poisson peak caller for ChIP/ATAC-seq BAMs: callpeak vs input/IgG, narrowPeak for TFs, broadPeak for histone marks."
 license: "BSD-3-Clause"
 ---
 

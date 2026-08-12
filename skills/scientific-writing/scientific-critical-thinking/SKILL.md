@@ -1,6 +1,6 @@
 ---
 name: "scientific-critical-thinking"
-description: "Evaluating scientific evidence and claims. Covers study design hierarchy (RCT to expert opinion), effect sizes (OR, RR, NNT, Cohen's d), confounding, p-value vs clinical significance, GRADE quality assessment, reproducibility, and bias types (selection, information, confounding, reporting). Use when reading a paper or assessing claims."
+description: "Evaluating evidence: study design hierarchy, effect sizes (OR, RR, NNT, Cohen's d), confounding, GRADE, bias types."
 license: "CC-BY-4.0"
 ---
 

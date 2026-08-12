@@ -1,6 +1,6 @@
 ---
 name: "geniml"
-description: "Python library for genomic interval ML. Train/apply region2vec embeddings turning BED regions into vectors, index interval datasets for ML, search embedding space with BEDSpace, and evaluate embedding quality. Use for chromatin accessibility clustering, regulatory element classification, and cross-sample region comparison."
+description: "Genomic interval ML: region2vec embeddings for BED regions, dataset indexing, BEDSpace embedding search, quality evaluation."
 license: "BSD-2-Clause"
 ---
 

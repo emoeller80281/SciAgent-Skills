@@ -1,6 +1,6 @@
 ---
 name: gwas-database
-description: "NHGRI-EBI GWAS Catalog REST API for SNP-trait associations from published GWAS. Query studies, associations, variants, traits, genes, summary stats. Build PRS candidates, analyze pleiotropy, fetch stats for Manhattan plots. No auth."
+description: "NHGRI-EBI GWAS Catalog REST: SNP-trait associations, studies, variants, traits, genes, summary stats for PRS and Manhattan."
 license: Apache-2.0
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: "prokka-genome-annotation"
-description: "Annotate prokaryotic genomes (bacteria, archaea, viruses) via Prokka's BLAST/HMM pipeline. Identifies CDS, rRNA, tRNA, tmRNA, signal peptides against Pfam, TIGRFAMs, RefSeq. Outputs GFF3, GenBank, FASTA, TSV. Use PGAP for NCBI GenBank submission; Bakta for faster NCBI-compatible annotation."
+description: "Prokaryotic genome annotation via BLAST/HMM: CDS, rRNA, tRNA, tmRNA, signal peptides vs Pfam/TIGRFAMs; GFF3, GenBank."
 license: "GPL-3.0"
 ---
 

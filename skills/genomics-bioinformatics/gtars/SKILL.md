@@ -1,6 +1,6 @@
 ---
 name: "gtars"
-description: "Rust-backed Python library for fast genomic token arithmetic and BED processing. High-performance BED I/O, interval set ops (intersect, merge, complement, subtract), region tokenization against a universe, universe construction. Use for preprocessing large BED collections and ML token vocabularies."
+description: "Rust-backed fast BED processing: high-performance I/O, interval set ops (intersect, merge, complement), region tokenization."
 license: "MIT"
 ---
 

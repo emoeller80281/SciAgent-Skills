@@ -1,6 +1,6 @@
 ---
 name: ena-database
-description: "ENA REST API for sequences, reads, assemblies, and annotations. Portal API search, Browser API retrieval (XML/FASTA/EMBL), file reports for FASTQ/BAM URLs, taxonomy, cross-refs. For multi-DB Python use bioservices; for NCBI-only use pubmed-database or Biopython Entrez."
+description: "ENA REST: sequences, reads, assemblies, annotations; Portal search, Browser XML/FASTA/EMBL, FASTQ/BAM URLs, taxonomy."
 license: Unknown
 ---
 

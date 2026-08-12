@@ -1,6 +1,6 @@
 ---
 name: zarr-python
-description: "Chunked N-D arrays with compression and cloud storage. NumPy-style indexing. Backends: local, S3, GCS, ZIP, memory. Dask/Xarray integration for parallel and labeled computation. For lineage use lamindb; for labeled arrays use xarray."
+description: "Chunked, compressed N-D arrays with NumPy indexing; local, S3, GCS, ZIP, memory backends; Dask and Xarray integration."
 license: MIT
 ---
 

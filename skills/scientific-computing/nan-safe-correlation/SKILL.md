@@ -1,6 +1,6 @@
 ---
 name: nan-safe-correlation
-description: "Per-feature NaN-safe Spearman/Pearson correlation across many features (genes, proteins, variants) with missing values. Covers why bulk matrix shortcuts fail, correct pairwise deletion, degenerate input filtering, and large-dataset performance. Use statistical-analysis for test choice; shap-model-explainability for interpretability."
+description: "Per-feature NaN-safe Spearman/Pearson across features: why matrix shortcuts fail, correct pairwise deletion, performance."
 license: CC-BY-4.0
 ---
 

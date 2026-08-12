@@ -1,6 +1,6 @@
 ---
 name: "popv-cell-annotation"
-description: "Consensus cell type annotation: runs 10+ algorithms (KNN-Harmony/BBKNN/Scanorama/scVI, CellTypist, ONCLASS, Random Forest, SCANVI, SVM, XGBoost) on a labeled reference and transfers labels via majority voting. Outputs per-method labels, consensus, agreement score. Use when single-method annotation is insufficient or you need ensemble uncertainty for novel states."
+description: "Consensus annotation from 10+ algorithms (scVI, CellTypist, ONCLASS, SCANVI, XGBoost): majority vote, agreement score."
 license: "BSD-3-Clause"
 ---
 

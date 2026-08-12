@@ -1,6 +1,6 @@
 ---
 name: "clinvar-database"
-description: "Query NCBI ClinVar via E-utilities for variant clinical significance, pathogenicity, disease associations. Search by gene/rsID/condition/review status; returns ClinSig, submitter data, conditions, HGVS. For GWAS use gwas-database; for variant consequence prediction use Ensembl VEP."
+description: "NCBI ClinVar via E-utilities: variant clinical significance, pathogenicity, disease associations, review status, HGVS."
 license: "CC0-1.0"
 ---
 

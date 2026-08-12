@@ -1,6 +1,6 @@
 ---
 name: "biorxiv-database"
-description: "Query bioRxiv/medRxiv preprints via REST API. Search by DOI, category, or date range; retrieve metadata (title, abstract, authors, category, DOI, version history) and PDFs. No auth. For peer-reviewed biomedical use pubmed-database; broader scholarly search use openalex-database."
+description: "bioRxiv/medRxiv preprints via REST: search by DOI, category, or date range; metadata, abstracts, version history, PDFs."
 license: "CC0-1.0"
 ---
 

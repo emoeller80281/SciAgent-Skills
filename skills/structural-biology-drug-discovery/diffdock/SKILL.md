@@ -1,6 +1,6 @@
 ---
 name: "diffdock"
-description: "Diffusion-based docking that predicts protein-ligand poses without a predefined site. Use for blind docking, when traditional docking fails, or exploring multiple binding modes. Pipeline: prep protein (PDB) and ligand (SMILES/SDF), run inference, analyze confidence-ranked poses."
+description: "Diffusion-based blind docking without a predefined site: PDB and SMILES/SDF prep, inference, confidence-ranked poses."
 license: "MIT"
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: "quickgo-database"
-description: "Query EBI QuickGO REST API for GO terms and protein annotations. Fetch term metadata by ID, search by keyword, walk ancestor/descendant hierarchies, download annotations filtered by taxon, evidence code, aspect. Use for GO resolution, ontology traversal, annotation retrieval before enrichment. Use gseapy-gene-enrichment for enrichment; uniprot-protein-database for proteins."
+description: "EBI QuickGO REST: GO term metadata, keyword search, ancestor/descendant traversal, annotations by taxon, evidence, aspect."
 license: "Apache-2.0"
 ---
 

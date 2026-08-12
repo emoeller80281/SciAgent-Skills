@@ -1,6 +1,6 @@
 ---
 name: "geo-database"
-description: "NCBI GEO access via GEOparse and E-utilities. Search by keyword/organism/platform, download GSE series matrices, parse GPL annotations, extract GSM metadata, load expression matrices into pandas. For single-cell use cellxgene-census; for multi-DB access use gget-genomic-databases."
+description: "NCBI GEO via GEOparse and E-utilities: search by keyword/organism/platform, GSE matrices, GPL/GSM metadata into pandas."
 license: "MIT"
 ---
 

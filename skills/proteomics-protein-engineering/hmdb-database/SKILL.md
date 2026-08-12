@@ -1,6 +1,6 @@
 ---
 name: "hmdb-database"
-description: "Parse HMDB (Human Metabolome Database) local XML for metabolite info, chemical properties, biological context, disease links, spectra, and cross-DB mapping. No REST API — uses ~6 GB XML download. Use drugbank-database-access for drugs; pubchem-compound-search for live lookups."
+description: "Parse HMDB local XML (~6 GB, no REST API): metabolite properties, biological context, disease links, spectra, cross-DB IDs."
 license: "CC-BY-4.0"
 ---
 

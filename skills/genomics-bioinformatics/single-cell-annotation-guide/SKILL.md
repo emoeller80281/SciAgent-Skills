@@ -1,6 +1,6 @@
 ---
 name: "single-cell-annotation-guide"
-description: "Decision framework for manual marker-based, automated (CellTypist), and reference-based (popV) cell type annotation in scRNA-seq. Three-tier strategy: Tier 1 manual markers, Tier 2 CellTypist, Tier 3 popV ensemble transfer. Use when planning or troubleshooting annotation."
+description: "Choosing scRNA-seq annotation strategy: Tier 1 manual markers, Tier 2 CellTypist automation, Tier 3 popV ensemble transfer."
 license: "CC-BY-4.0"
 ---
 

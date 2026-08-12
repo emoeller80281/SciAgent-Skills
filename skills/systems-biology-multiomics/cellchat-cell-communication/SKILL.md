@@ -1,6 +1,6 @@
 ---
 name: "cellchat-cell-communication"
-description: "Infer and visualize intercellular communication from scRNA-seq with CellChat (R). Build CellChat from Seurat/counts → subset CellChatDB ligand-receptor pairs → over-expressed genes per group → communication probabilities → pathway signaling → network centrality (senders/receivers/influencers) → chord/heatmap/bubble plots → cross-condition compare. Human, mouse. Use liana for pure-Python."
+description: "Cell-cell communication from scRNA-seq with CellChat (R): ligand-receptor pairs, pathway signaling, network centrality."
 license: "MIT"
 ---
 

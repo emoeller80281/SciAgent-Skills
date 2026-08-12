@@ -1,6 +1,6 @@
 ---
 name: "roary-pangenome"
-description: "Compute the bacterial pan-genome from Prokka/Bakta GFF3 annotations with Roary's CD-HIT + BLAST + MCL clustering pipeline. Builds gene presence/absence matrices, core/soft-core/shell/cloud partitions, multi-FASTA core gene alignments (with `-e`), and a pan-genome reference. Use Panaroo for higher-accuracy pan-genomes from highly fragmented assemblies, PIRATE for paralog-aware clustering, or PPanGGOLiN for graph-based partitioning."
+description: "Bacterial pan-genome from GFF3 via CD-HIT+BLAST+MCL: presence/absence matrix, core/soft-core/shell/cloud, core alignment."
 license: "GPL-3.0"
 ---
 

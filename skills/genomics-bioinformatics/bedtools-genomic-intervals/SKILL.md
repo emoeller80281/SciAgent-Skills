@@ -1,6 +1,6 @@
 ---
 name: "bedtools-genomic-intervals"
-description: "Genomic interval ops on BED/BAM/GFF/VCF. Find overlaps, merge intervals, compute coverage, extract FASTA, find nearest features. Core for ChIP-seq peak annotation, region filtering, genome arithmetic. Use tabix for indexed single-region queries; use deeptools for normalized bigWig coverage."
+description: "Interval ops on BED/BAM/GFF/VCF: overlaps, merge, coverage, FASTA extraction, nearest features, genome arithmetic."
 license: "GPL-2.0"
 ---
 

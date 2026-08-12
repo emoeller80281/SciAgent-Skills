@@ -1,6 +1,6 @@
 ---
 name: "scientific-manuscript-writing"
-description: "Scientific manuscript writing: IMRAD, citation styles (APA/AMA/Vancouver/IEEE), figures/tables, reporting guidelines (CONSORT/STROBE/PRISMA/ARRIVE), writing principles (clarity/conciseness/accuracy), venue-specific style. For LaTeX see companion assets."
+description: "Manuscript writing: IMRAD, APA/AMA/Vancouver/IEEE citations, figures/tables, CONSORT/STROBE/PRISMA/ARRIVE guidelines."
 license: "CC-BY-4.0"
 ---
 

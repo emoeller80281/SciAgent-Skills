@@ -1,6 +1,6 @@
 ---
 name: "fastp-fastq-preprocessing"
-description: "All-in-one FASTQ QC and adapter trimming. Auto-detects Illumina adapters, filters low-quality reads, corrects paired-end overlaps, emits HTML+JSON QC in one pass. 3-10x faster than Trim Galore/Trimmomatic. First step before STAR, BWA-MEM2, or Salmon."
+description: "FASTQ QC and adapter trimming in one pass: auto adapter detection, quality filtering, PE overlap correction, HTML/JSON QC."
 license: "MIT"
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: "pydeseq2-differential-expression"
-description: "Bulk RNA-seq DE with PyDESeq2: load counts, normalize, fit negative binomial models, Wald test (BH-FDR), LFC shrinkage, volcano/MA plots. Use for two-group comparisons, multi-factor designs with batch correction, multiple contrasts."
+description: "Bulk RNA-seq DE in Python: negative binomial fit, Wald test with BH-FDR, LFC shrinkage, multi-factor designs, volcano/MA."
 license: "CC-BY-4.0"
 ---
 

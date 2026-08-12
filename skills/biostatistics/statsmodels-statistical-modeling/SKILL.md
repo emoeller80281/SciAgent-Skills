@@ -1,6 +1,6 @@
 ---
 name: "statsmodels-statistical-modeling"
-description: "Python statistical modeling: regression (OLS, WLS, GLM), discrete (Logit, Poisson, NegBin), time series (ARIMA, SARIMAX, VAR), with rigorous inference, diagnostics, and hypothesis tests. Use scikit-learn for ML; statistical-analysis for test choice."
+description: "Statistical modeling: OLS/WLS/GLM, Logit/Poisson/NegBin, ARIMA/SARIMAX/VAR, with inference, diagnostics, hypothesis tests."
 license: "BSD-3-Clause"
 ---
 

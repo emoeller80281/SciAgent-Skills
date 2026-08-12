@@ -1,6 +1,6 @@
 ---
 name: nejm-figure-guide
-description: "NEJM figure preparation: resolution (300-1200 DPI), editable vector formats (AI/EPS/SVG), in-house medical illustration policy, and strict image integrity requirements."
+description: "NEJM figures: 300-1200 DPI, editable vector AI/EPS/SVG, in-house medical illustration policy, image integrity rules."
 license: CC-BY-4.0
 compatibility: Python 3.10+, Pillow, Matplotlib
 metadata:

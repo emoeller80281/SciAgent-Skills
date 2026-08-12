@@ -1,6 +1,6 @@
 ---
 name: "dbsnp-database"
-description: "Query NCBI dbSNP for SNP records by rsID, gene, or region via E-utilities and Variation Services REST API. Retrieve alleles, MAF, variant class (SNV/indel/MNV), clinical links, cross-DB IDs (ClinVar, dbVar, 1000G). Free; 3 req/sec (10 with key). For clinical pathogenicity use clinvar-database; for population frequencies use gnomad-database."
+description: "NCBI dbSNP by rsID/gene/region: alleles, MAF, variant class (SNV/indel/MNV), clinical links, ClinVar/dbVar/1000G IDs."
 license: "CC0-1.0"
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: "citation-management"
-description: "Selecting a reference manager and applying citation styles. Compares Zotero, Mendeley, EndNote, Paperpile; covers APA/Vancouver/ACS/Nature styles, DOI management, citation tracking, and Word/Google Docs/LaTeX integration. Use when setting up a reference workflow or fixing citation formatting."
+description: "Reference managers (Zotero, Mendeley, EndNote, Paperpile), APA/Vancouver/ACS/Nature styles, DOI and Word/LaTeX integration."
 license: "CC-BY-4.0"
 ---
 

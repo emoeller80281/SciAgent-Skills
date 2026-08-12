@@ -1,6 +1,6 @@
 ---
 name: string-database-ppi
-description: Query STRING REST API for PPIs (59M proteins, 20B interactions, 5000+ species). Retrieve networks, run GO/KEGG enrichment, find partners, test PPI significance, visualize networks, analyze homology. For chemical interactions use chembl-database-bioactivity; pathways use kegg-database.
+description: "STRING REST: PPI networks (59M proteins, 20B interactions, 5000+ species), GO/KEGG enrichment, partners, homology."
 license: CC-BY-4.0
 ---
 

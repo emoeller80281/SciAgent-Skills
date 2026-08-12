@@ -1,6 +1,6 @@
 ---
 name: omics-analysis-guide
-description: Three-tiered approach to omics data analysis (transcriptomics, proteomics) covering validated pipelines, standard workflows, and custom methods
+description: "Three-tiered omics analysis for transcriptomics and proteomics: validated pipelines, standard workflows, custom methods."
 license: open
 ---
 

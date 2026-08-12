@@ -1,6 +1,6 @@
 ---
 name: "featurecounts-rna-counting"
-description: "Counts RNA-seq reads overlapping GTF gene features. Takes sorted STAR BAMs plus GTF; outputs a per-gene tab-delimited matrix across samples. Handles strandedness (0/1/2), paired-end, multi-sample batch counting in one command, and outputs assignment statistics. Use Salmon for alignment-free quantification; use featureCounts when STAR BAMs already exist."
+description: "Count RNA-seq reads over GTF features from sorted BAMs: per-gene matrix, strandedness, paired-end, multi-sample batches."
 license: "GPL-3.0"
 ---
 

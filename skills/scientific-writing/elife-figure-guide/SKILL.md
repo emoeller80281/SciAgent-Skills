@@ -1,6 +1,6 @@
 ---
 name: elife-figure-guide
-description: "eLife figure preparation: file formats (TIFF/EPS/PDF), striking image requirements (1800x900 px), figure supplement naming, and image screening policy treating selective enhancement as misconduct."
+description: "eLife figures: TIFF/EPS/PDF, striking image 1800x900 px, figure supplement naming, image screening and misconduct policy."
 license: CC-BY-4.0
 compatibility: Python 3.10+, Pillow, Matplotlib
 metadata:

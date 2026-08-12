@@ -1,6 +1,6 @@
 ---
 name: "pdb-database"
-description: "Query RCSB PDB (200K+ structures) via the public REST + GraphQL APIs with plain `requests` (no SDK). Search by text, attribute, sequence, or 3D structure similarity (Search API); retrieve metadata via GraphQL (Data API); download PDB/mmCIF from files.rcsb.org. For AlphaFold predictions use alphafold-database-access; for protein sequences only use uniprot-protein-database."
+description: "RCSB PDB 200K+ structures: text/attribute/sequence/3D-similarity Search API, GraphQL metadata, PDB/mmCIF download."
 license: "BSD-3-Clause"
 ---
 

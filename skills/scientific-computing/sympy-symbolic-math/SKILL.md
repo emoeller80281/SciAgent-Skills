@@ -1,6 +1,6 @@
 ---
 name: sympy-symbolic-math
-description: "Symbolic math in Python: exact algebra, calculus (derivatives, integrals, limits), equation solving, symbolic matrices, ODEs, code gen (lambdify, C/Fortran). Use for exact symbolic results. For numerical use numpy/scipy; for stats use statsmodels."
+description: "Symbolic math: exact algebra, derivatives, integrals, limits, equation solving, matrices, ODEs, lambdify and C codegen."
 license: BSD-3-Clause
 ---
 

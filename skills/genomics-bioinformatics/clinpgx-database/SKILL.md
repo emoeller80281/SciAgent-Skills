@@ -1,6 +1,6 @@
 ---
 name: "clinpgx-database"
-description: "Query the ClinPGx (formerly PharmGKB) REST API plus the CPIC PostgREST companion API for pharmacogenomic clinical annotations, CPIC/DPWG dosing guidelines, gene-drug pairs, variant-drug associations, FDA/EMA drug labels, and PGx pathways. Two-host architecture: api.clinpgx.org for annotation records, api.cpicpgx.org for genotype→recommendation lookups. No auth. For germline pathogenicity use clinvar-database; for somatic cancer PGx use cosmic-database or opentargets-database; for drug bioactivity use chembl-database-bioactivity."
+description: "ClinPGx (PharmGKB) + CPIC APIs: PGx annotations, CPIC/DPWG dosing guidelines, gene-drug pairs, FDA/EMA labels. No auth."
 license: "CC-BY-SA-4.0"
 ---
 

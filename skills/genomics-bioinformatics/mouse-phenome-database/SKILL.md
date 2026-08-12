@@ -1,6 +1,6 @@
 ---
 name: "mouse-phenome-database"
-description: "Retrieve mouse phenotype data from the Jackson Laboratory Mouse Phenome Database (MPD) via its REST API. Browse 520+ projects, look up per-project measure metadata, pull strain-level means (raw or LS-mean adjusted) and per-animal values, find measures by MP/VT ontology terms, and resolve strain nomenclature or gene coordinates. Use for QTL support, cross-strain comparison, mouse model selection, and ontology-driven phenotype discovery. Use monarch-database for disease-gene-phenotype knowledge graphs; ensembl-database for mouse genome annotations."
+description: "JAX Mouse Phenome Database REST: 520+ projects, strain-level means, per-animal values, MP/VT ontology terms, strain names."
 license: "CC-BY-4.0"
 ---
 

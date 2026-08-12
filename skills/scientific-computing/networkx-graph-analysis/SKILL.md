@@ -1,6 +1,6 @@
 ---
 name: "networkx-graph-analysis"
-description: "Graph and network analysis toolkit. Four graph types (directed, undirected, multi-edge), centrality, shortest paths, community detection, generators, I/O (GraphML, GML, edge list), matplotlib viz. For large graphs (100K+ nodes) use igraph or graph-tool; for GNNs use PyG."
+description: "Graph analysis: directed/undirected/multi-edge types, centrality, shortest paths, community detection, GraphML/GML I/O."
 license: BSD-3-Clause
 ---
 

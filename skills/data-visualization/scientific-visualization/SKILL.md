@@ -1,6 +1,6 @@
 ---
 name: "scientific-visualization"
-description: "Guide for choosing and creating scientific visualizations for publications and talks. Covers chart-type selection by data structure, color theory for accessibility/print, figure composition, journal formatting (Nature, Cell, ACS), and common pitfalls. Consult when visualizing data or preparing submission figures."
+description: "Choosing scientific visualizations: chart type by data structure, accessible color, composition, journal formatting."
 license: "CC-BY-4.0"
 ---
 

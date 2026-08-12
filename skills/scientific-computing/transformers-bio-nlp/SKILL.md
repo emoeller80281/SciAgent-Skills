@@ -1,6 +1,6 @@
 ---
 name: "transformers-bio-nlp"
-description: "HuggingFace Transformers with biomedical LMs (BioBERT, PubMedBERT, BioGPT, BioMedLM) for scientific NLP: NER (genes, diseases, chemicals), relation extraction, QA, text classification, abstract summarization. Covers loading, biomedical tokenization, inference pipelines, fine-tuning. Alternatives: spaCy en_core_sci_lg (rule-based NER), Stanza (biomedical models), NLTK."
+description: "Biomedical LMs (BioBERT, PubMedBERT, BioGPT): NER for genes/diseases/chemicals, relation extraction, QA, fine-tuning."
 license: "Apache-2.0"
 ---
 

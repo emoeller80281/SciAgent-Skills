@@ -1,6 +1,6 @@
 ---
 name: "celltypist-cell-annotation"
-description: "Automated scRNA-seq cell type annotation via pre-trained logistic regression. 45+ models: immune, gut, lung, brain, fetal, cancer microenvironments. Input normalized AnnData; outputs per-cell labels, majority-vote cluster labels, confidence scores. Use for fast, reference-backed annotation without manual marker inspection."
+description: "scRNA-seq annotation via pre-trained logistic regression; 45+ immune/gut/lung/brain models, per-cell and cluster labels."
 license: "MIT"
 ---
 

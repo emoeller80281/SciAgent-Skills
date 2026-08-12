@@ -1,6 +1,6 @@
 ---
 name: reactome-database
-description: "Query Reactome pathways via REST: pathway queries, entity lookup, keyword search, gene list enrichment, hierarchy, cross-refs. Content + Analysis services. Python wrapper: reactome2py. For KEGG use kegg-database; for PPIs use string-database-ppi."
+description: "Reactome REST: pathway queries, entity lookup, keyword search, gene list enrichment, hierarchy, reactome2py wrapper."
 license: CC-BY-4.0
 ---
 

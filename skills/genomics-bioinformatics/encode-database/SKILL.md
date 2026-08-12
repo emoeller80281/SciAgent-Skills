@@ -1,6 +1,6 @@
 ---
 name: "encode-database"
-description: "ENCODE Portal REST API for regulatory genomics: TF ChIP-seq, ATAC-seq/DNase-seq peaks, histone marks, and RNA-seq across 1000+ cell types. Search experiments by assay/biosample/target; download BED/bigWig; retrieve SCREEN cCREs by region or gene. Use to annotate variants with regulatory tracks, find open chromatin in a cell type, or fetch peak files for ChIP/ATAC analysis. For regulatory variant scoring use regulomedb-database; for GWAS associations use gwas-database."
+description: "ENCODE Portal: TF ChIP-seq, ATAC/DNase peaks, histone marks, RNA-seq across 1000+ cell types; BED/bigWig, SCREEN cCREs."
 license: "CC-BY-4.0"
 ---
 

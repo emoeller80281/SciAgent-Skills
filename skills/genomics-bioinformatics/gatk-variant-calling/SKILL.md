@@ -1,6 +1,6 @@
 ---
 name: "gatk-variant-calling"
-description: "GATK Best Practices for germline SNP/indel calling from WGS/WES BAMs. Per-sample HaplotypeCaller GVCFs, GenomicsDBImport, GenotypeGVCFs joint calling, VQSR or hard filters. Requires BWA-MEM2-aligned, markdup, BQSR BAMs. Use DeepVariant for a faster DL alternative; GATK is the NIH/ENCODE standard."
+description: "GATK germline SNP/indel calling: HaplotypeCaller GVCFs, GenomicsDBImport, GenotypeGVCFs joint calling, VQSR or hard filters."
 license: "BSD-3-Clause"
 ---
 

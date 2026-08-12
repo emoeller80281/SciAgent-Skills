@@ -1,6 +1,6 @@
 ---
 name: "gseapy-gene-enrichment"
-description: "GSEA and over-representation analysis (ORA) for RNA-seq and proteomics. Wraps Enrichr for ORA against MSigDB, KEGG, GO, and 200+ databases; runs preranked GSEA on ranked DE gene lists. Outputs enrichment tables and running-score plots. Use after DESeq2 or edgeR for pathway-level interpretation."
+description: "GSEA and over-representation analysis: Enrichr ORA vs MSigDB/KEGG/GO, preranked GSEA on DE lists, running-score plots."
 license: "MIT"
 ---
 

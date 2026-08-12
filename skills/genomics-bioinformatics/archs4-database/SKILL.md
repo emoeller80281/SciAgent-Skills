@@ -1,6 +1,6 @@
 ---
 name: "archs4-database"
-description: "Query ARCHS4 REST API for uniformly processed RNA-seq expression, tissue patterns, co-expression across 1M+ human/mouse samples. Retrieve z-scores, co-expressed genes, samples by metadata, HDF5 matrices. For variant population genetics use gnomad-database; for pathway enrichment use gget-genomic-databases (Enrichr)."
+description: "ARCHS4 API: uniformly processed RNA-seq expression, tissue patterns, co-expression, z-scores across 1M+ human/mouse samples."
 license: "CC-BY-4.0"
 ---
 

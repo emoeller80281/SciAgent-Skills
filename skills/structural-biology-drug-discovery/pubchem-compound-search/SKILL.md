@@ -1,6 +1,6 @@
 ---
 name: "pubchem-compound-search"
-description: "Query PubChem (110M+ compounds) directly via the PUG-REST/JSON API with plain `requests` — no SDK install required. Search by name/CID/SMILES/InChIKey/formula, retrieve properties (MW, XLogP, TPSA, H-bond counts), do similarity/substructure searches with async ListKey polling, fetch synonyms, descriptions, assay summaries, and download SDF/PNG. For local cheminformatics use rdkit; for bioactivity-centric workflows use chembl-database-bioactivity."
+description: "PubChem PUG-REST: search by name/CID/SMILES/InChIKey, properties (MW, XLogP, TPSA), similarity/substructure, SDF/PNG."
 license: "CC-BY-4.0"
 ---
 

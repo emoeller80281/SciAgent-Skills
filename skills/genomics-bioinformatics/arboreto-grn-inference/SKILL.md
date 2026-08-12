@@ -1,6 +1,6 @@
 ---
 name: "arboreto-grn-inference"
-description: "GRN inference from expression via GRNBoost2 (gradient boosting) or GENIE3 (Random Forest). Load matrix, filter by TFs, infer TF-target-importance links, save network. Dask-parallelized to single-cell scale. Core SCENIC component."
+description: "GRN inference from expression: GRNBoost2 (gradient boosting) or GENIE3 (Random Forest), TF-target links, Dask-parallel."
 license: "BSD-3-Clause"
 ---
 

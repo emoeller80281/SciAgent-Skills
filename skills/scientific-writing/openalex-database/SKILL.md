@@ -1,6 +1,6 @@
 ---
 name: "openalex-database"
-description: "Query OpenAlex REST API for 250M+ scholarly works, authors, institutions, journals, concepts. Search by keyword, author, DOI, ORCID, or ID; filter by year, OA, citations, field; retrieve citations, references, author disambiguation. Free, no auth. For PubMed use pubmed-database; preprints use biorxiv-database."
+description: "OpenAlex REST: 250M+ works, authors, institutions, journals; search by keyword/DOI/ORCID, filter by year, OA, citations."
 license: "CC0-1.0"
 ---
 

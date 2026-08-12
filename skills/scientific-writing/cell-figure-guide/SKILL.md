@@ -1,6 +1,6 @@
 ---
 name: cell-figure-guide
-description: "Cell (Cell Press) figure preparation: resolution (300-1000 DPI), formats (TIFF/PDF), RGB color, Avenir/Arial fonts, uppercase panel labels, strict image manipulation policies."
+description: "Cell Press figures: 300-1000 DPI, TIFF/PDF, RGB, Avenir/Arial, uppercase panel labels, image manipulation policies."
 license: CC-BY-4.0
 compatibility: Python 3.10+, Pillow, Matplotlib
 metadata:

@@ -1,6 +1,6 @@
 ---
 name: "bcftools-variant-manipulation"
-description: "CLI for VCF/BCF: filter, merge, annotate, query, normalize, compute stats. Core post-variant-calling: quality filtering, multi-sample merging, rsID annotation, genotype extraction. Samtools companion in HTSlib. Use GATK for complex indel realignment during calling; use VCFtools for population genetics stats."
+description: "VCF/BCF CLI: filter, merge, annotate, query, normalize, stats; quality filtering, multi-sample merge, rsID, genotypes."
 license: "MIT"
 ---
 

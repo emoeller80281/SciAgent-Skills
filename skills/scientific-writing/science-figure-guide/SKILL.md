@@ -1,6 +1,6 @@
 ---
 name: science-figure-guide
-description: "Science (AAAS) figure preparation: resolution (150-300+ DPI), formats (PDF/EPS/TIFF), RGB color, Myriad/Helvetica fonts, strict image manipulation policies including gamma adjustment disclosure."
+description: "Science (AAAS) figures: 150-300+ DPI, PDF/EPS/TIFF, RGB, Myriad/Helvetica, manipulation policy incl. gamma disclosure."
 license: CC-BY-4.0
 compatibility: Python 3.10+, Pillow, Matplotlib
 metadata:

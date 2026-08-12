@@ -1,6 +1,6 @@
 ---
 name: "star-rna-seq-aligner"
-description: "Splice-aware RNA-seq aligner producing sorted BAM and splice junction tables. Builds genome index, runs two-pass alignment for better junctions. Outputs sorted BAM, junctions (SJ.out.tab), stats (Log.final.out), optional gene counts. Use Salmon for fast pseudoalignment; STAR when a BAM is needed for variant calling, IGV, or ENCODE pipelines."
+description: "Splice-aware RNA-seq aligner: genome index, two-pass alignment, sorted BAM, SJ.out.tab junctions, optional gene counts."
 license: "MIT"
 ---
 

@@ -1,6 +1,6 @@
 ---
 name: "pymc-bayesian-modeling"
-description: "Bayesian modeling with PyMC 5: priors, likelihood, NUTS/ADVI sampling, diagnostics (R-hat, ESS), LOO/WAIC comparison, prediction. Hierarchical, logistic, GP variants; predictive checks."
+description: "PyMC 5 Bayesian modeling: priors, NUTS/ADVI sampling, R-hat/ESS diagnostics, LOO/WAIC, hierarchical, logistic, GP."
 license: "Apache-2.0"
 ---
 

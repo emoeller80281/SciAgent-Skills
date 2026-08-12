@@ -1,6 +1,6 @@
 ---
 name: peer-review-methodology
-description: "Structured peer review of manuscripts and grants. 7-stage evaluation: initial assessment, section review, statistical rigor, reproducibility, figure integrity, ethics, writing. Covers CONSORT/STROBE/PRISMA and report structure. For evidence quality see scientific-critical-thinking; scoring see scholar-evaluation."
+description: "Structured manuscript and grant review in 7 stages: assessment, sections, statistics, reproducibility, figures, ethics."
 license: CC-BY-4.0
 ---
 
