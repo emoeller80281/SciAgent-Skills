@@ -1,3 +1,7 @@
+I ran into an issue with Claude Code where a plugin can only have ~15k characters in all skill descriptions. I removed a bunch of skills that are unnecessary for me and reduced the size of the remaining descriptions so that Claude could load all of the skills.
+
+---
+
 # SciAgent-Skills
 
 <p align="center">
